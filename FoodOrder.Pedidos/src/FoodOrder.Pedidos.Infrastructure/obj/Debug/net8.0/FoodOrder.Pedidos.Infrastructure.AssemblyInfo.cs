@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoodOrder.Pedidos.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e4844968571ae104f5c703afc49f781ae2d328c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9ab2acbd0e24bca1577c0f2010d04175c66c792")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodOrder.Pedidos.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoodOrder.Pedidos.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
