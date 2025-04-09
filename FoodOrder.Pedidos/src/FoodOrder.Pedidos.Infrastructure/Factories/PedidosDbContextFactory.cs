@@ -10,12 +10,20 @@ namespace FoodOrder.Pedidos.Infrastructure.Factories
         {
             var optionsBuilder = new DbContextOptionsBuilder<PedidosDbContext>();
 
-            // Substitua pela sua string real de conexão local
-            var connectionString = "Host=localhost;Port=5433;Database=foodorder;Username=postgres;Password=postgres";
+            // Pegando a connection string da variável de ambiente
+            var connectionString = Environment.GetEnvironmentVariable("DEFAULT_CONNECTION");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("A variável de ambiente 'DEFAULT_CONNECTION' não foi definida.");
+            }
 
             optionsBuilder.UseNpgsql(connectionString);
 
-            return new PedidosDbContext(connectionString);
+            // Cria um mock de IConnectionStringProvider só para fins de migração
+            var connectionStringProvider = new MockConnectionStringProvider(connectionString);
+
+            return new PedidosDbContext(connectionStringProvider);
         }
     }
 }
