@@ -27,7 +27,7 @@ services:
       ASPNETCORE_HTTP_PORTS: "8080"
       ASPNETCORE_HTTPS_PORTS: "8081"
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5433;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: ""
     image: foodorderpedidospresentation:dev
@@ -41,7 +41,7 @@ services:
     ports:
       - mode: ingress
         target: 80
-        published: "5000"
+        published: "8080"
         protocol: tcp
       - mode: ingress
         target: 8080
@@ -120,7 +120,7 @@ services:
     ports:
       - mode: ingress
         target: 5432
-        published: "5432"
+        published: "5433"
         protocol: tcp
     volumes:
       - type: volume

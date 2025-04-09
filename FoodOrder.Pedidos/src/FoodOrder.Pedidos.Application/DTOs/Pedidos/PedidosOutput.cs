@@ -8,6 +8,13 @@ namespace FoodOrder.Pedidos.Application.DTOs.Pedidos
 {
     public class PedidosOutput
     {
+        public PedidosOutput() 
+        {
+            Pronto = new List<PedidoOutput>();
+            EmPreparo = new List<PedidoOutput>();
+            Recebido = new List<PedidoOutput>();
+        }
+
         public PedidosOutput(List<PedidoOutput> pronto, List<PedidoOutput> emPreparo, List<PedidoOutput> recebido)
         {
             Pronto = pronto;

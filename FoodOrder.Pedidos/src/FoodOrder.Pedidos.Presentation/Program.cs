@@ -1,5 +1,5 @@
-using FoodOrder.Pedidos.Application.Interface;
-using FoodOrder.Pedidos.Application.Service;
+using FoodOrder.Pedidos.Application.DependencyInjection;
+using FoodOrder.Pedidos.Infrastructure.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,10 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient<IProdutoHttpService, ProdutoHttpService>(client =>
-{
-    client.BaseAddress = new Uri("https://sua-api-externa.com/api/"); //trocar a rota
-});
+builder.Services
+    .AddApplicationServices()
+    .AddInfrastructureServices()
+    .AddMessageBusServices();
 
 var app = builder.Build();
 

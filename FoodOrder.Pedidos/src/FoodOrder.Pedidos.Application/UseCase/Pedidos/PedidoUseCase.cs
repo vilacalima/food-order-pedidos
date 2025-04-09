@@ -11,14 +11,17 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
     {
         private readonly IPedidoRepository _pedidosRepository;
         private readonly ISacolaProdutoRepository _sacolaProdutoRepository;
-        private readonly IProdutoRepository _produtoRepository;
+        //private readonly IProdutoRepository _produtoRepository;
         private readonly IPedidoStatusRepository _pedidoStatusRepository;
 
-        public PedidoUseCase(IPedidoRepository pedidosRepository, ISacolaProdutoRepository sacolaProdutoRepository, IProdutoRepository produtoRepository, IPedidoStatusRepository pedidoStatusRepository)
+        public PedidoUseCase(IPedidoRepository pedidosRepository, 
+                            ISacolaProdutoRepository sacolaProdutoRepository, 
+                            //IProdutoRepository produtoRepository, 
+                            IPedidoStatusRepository pedidoStatusRepository)
         {
             _pedidosRepository = pedidosRepository;
             _sacolaProdutoRepository = sacolaProdutoRepository;
-            _produtoRepository = produtoRepository;
+            //_produtoRepository = produtoRepository;
             _pedidoStatusRepository = pedidoStatusRepository;
         }
 
@@ -29,19 +32,19 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
 
             if (pedidos.Count == 0)
             {
-                pedidos.Add(new Pedido());
-                PedidoOutput pedidoOutput = new PedidoOutput();
-                pedidoOutput.Produtos = new List<ProdutoOutput>();
-                ProdutoOutput produto = new ProdutoOutput();
-                PedidoStatusOutput pedidoStatus = new PedidoStatusOutput();
-                pedidoStatus.Id = 1;
-                pedidoStatus.Descricao = "Em preparação";
-                produto.Id = 1;
-                produto.Nome = "Nome";
-                produto.Descricao = "Descricao";
-                pedidoOutput.PedidoStatus = pedidoStatus;
-                pedidoOutput.Produtos.Add(produto);
-                pedidosOutput.Add(pedidoOutput);
+                //pedidos.Add(new Pedido());
+                //PedidoOutput pedidoOutput = new PedidoOutput();
+                //pedidoOutput.Produtos = new List<ProdutoOutput>();
+                //ProdutoOutput produto = new ProdutoOutput();
+                //PedidoStatusOutput pedidoStatus = new PedidoStatusOutput();
+                //pedidoStatus.Id = 1;
+                //pedidoStatus.Descricao = "Em preparação";
+                //produto.Id = 1;
+                //produto.Nome = "Nome";
+                //produto.Descricao = "Descricao";
+                //pedidoOutput.PedidoStatus = pedidoStatus;
+                //pedidoOutput.Produtos.Add(produto);
+                //pedidosOutput.Add(pedidoOutput);
 
             }
             else
@@ -109,7 +112,7 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
         private async Task<PedidoOutput> BuildPedidoOutput(Pedido pedido)
         {
             PedidoOutput pedidoOutput = new PedidoOutput();
-            PedidoStatusOutput pedidoStatusOutput = new PedidoStatusOutput();
+            //PedidoStatusOutput pedidoStatusOutput = new PedidoStatusOutput();
             PedidoStatus pedidoStatusDados = await _pedidoStatusRepository.ConsultarPorId(pedido.PedidoStatusId);
 
             pedidoOutput.Produtos = new List<ProdutoOutput>();
@@ -119,8 +122,8 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
             pedidoOutput.ClienteId = (pedido.ClienteId == Guid.Empty) ? null : pedido.ClienteId;
             pedidoOutput.PagamentoId = pedido.PagamentoId;
             pedidoOutput.SacolaId = pedido.SacolaId;
-            pedidoOutput.PedidoStatus = pedidoStatusOutput;
-            pedidoOutput.PedidoStatus.Id = pedidoStatusDados.Id;
+            //pedidoOutput.PedidoStatus = pedidoStatusOutput;
+            //pedidoOutput.PedidoStatus.Id = pedidoStatusDados.Id;
             pedidoOutput.PedidoStatus.Descricao = pedidoStatusDados.Descricao;
             pedidoOutput.DataCriacao = pedido.DataCriacao;
 
@@ -128,25 +131,25 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
 
             foreach (var SacolaProduto in sacolasProdutos)
             {
-                var produtoBase = await _produtoRepository.ConsultarPorId(SacolaProduto.ProdutoId);
+                //var produtoBase = await _produtoRepository.ConsultarPorId(SacolaProduto.ProdutoId);
 
-                if (produtoBase?.Id == null)
-                {
-                    ProdutoOutput produtoOut = new ProdutoOutput();
-                    produtoOut.Id = 1;
-                    produtoOut.Nome = "Nome";
-                    produtoOut.Descricao = "Descricao";
-                    pedidoOutput.Produtos.Add(produtoOut);
-                    continue;
-                }
-                else
-                {
-                    ProdutoOutput produto = new ProdutoOutput();
-                    produto.Id = produtoBase.Id;
-                    produto.Nome = produtoBase.Nome;
-                    produto.Descricao = produtoBase.Descricao;
-                    pedidoOutput.Produtos.Add(produto);
-                }
+                //if (produtoBase?.Id == null)
+                //{
+                //    ProdutoOutput produtoOut = new ProdutoOutput();
+                //    produtoOut.Id = 1;
+                //    produtoOut.Nome = "Nome";
+                //    produtoOut.Descricao = "Descricao";
+                //    pedidoOutput.Produtos.Add(produtoOut);
+                //    continue;
+                //}
+                //else
+                //{
+                //    ProdutoOutput produto = new ProdutoOutput();
+                //    produto.Id = produtoBase.Id;
+                //    produto.Nome = produtoBase.Nome;
+                //    produto.Descricao = produtoBase.Descricao;
+                //    pedidoOutput.Produtos.Add(produto);
+                //}
             }
 
             return pedidoOutput;
@@ -154,30 +157,34 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
 
         private PedidosOutput OrdenarPedidos(List<PedidoOutput> pedidos)
         {
-            PedidosOutput pedidosOutput = new PedidosOutput();
-            pedidosOutput.Pronto = new List<PedidoOutput>();
-            pedidosOutput.EmPreparo = new List<PedidoOutput>();
-            pedidosOutput.Recebido = new List<PedidoOutput>();
+            //PedidosOutput pedidosOutput = new PedidosOutput();
+            //pedidosOutput.Pronto = new List<PedidoOutput>();
+            //pedidosOutput.EmPreparo = new List<PedidoOutput>();
+            //pedidosOutput.Recebido = new List<PedidoOutput>();
 
-            pedidos = pedidos.OrderBy(x => x.DataCriacao).ToList();
+            //pedidos = pedidos.OrderBy(x => x.DataCriacao).ToList();
 
-            foreach (var item in pedidos)
-            {
-                if (item.PedidoStatus.Descricao == "Pronto")
-                {
-                    pedidosOutput.Pronto.Add(item);
-                }
-                else if (item.PedidoStatus.Descricao == "Em preparação")
-                {
-                    pedidosOutput.EmPreparo.Add(item);
-                }
-                else if (item.PedidoStatus.Descricao == "Recebido")
-                {
-                    pedidosOutput.Recebido.Add(item);
-                }
-            }
+            //foreach (var item in pedidos)
+            //{
+            //    if (item.PedidoStatus.Descricao == "Pronto")
+            //    {
+            //        pedidosOutput.Pronto.Add(item);
+            //    }
+            //    else if (item.PedidoStatus.Descricao == "Em preparação")
+            //    {
+            //        pedidosOutput.EmPreparo.Add(item);
+            //    }
+            //    else if (item.PedidoStatus.Descricao == "Recebido")
+            //    {
+            //        pedidosOutput.Recebido.Add(item);
+            //    }
+            //}
 
-            return pedidosOutput;
+            return new PedidosOutput(
+    new List<PedidoOutput>(),
+    new List<PedidoOutput>(),
+    new List<PedidoOutput>()
+);
         }
     }
 }

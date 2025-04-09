@@ -5,12 +5,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Messaging\Consumers\" />
-    <Folder Include="Messaging\Producers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.400.130" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.4" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Polly" Version="8.5.2" />
   </ItemGroup>
 
   <PropertyGroup>

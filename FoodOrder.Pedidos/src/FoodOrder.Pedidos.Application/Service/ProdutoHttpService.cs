@@ -1,13 +1,8 @@
 ﻿using FoodOrder.Pedidos.Application.DTOs.Produto;
-using FoodOrder.Pedidos.Application.Interface;
+using FoodOrder.Pedidos.Application.Interfaces;
 using Polly;
 using Polly.Retry;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FoodOrder.Pedidos.Application.Service
 {

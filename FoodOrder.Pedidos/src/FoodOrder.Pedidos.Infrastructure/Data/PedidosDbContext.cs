@@ -6,6 +6,7 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
 {
     public class PedidosDbContext : DbContext
     {
+        private readonly string _connectionString;
         private readonly IConnectionStringProvider _connectionStringProvider;
 
         public PedidosDbContext(IConnectionStringProvider connectionStringProvider)
@@ -13,9 +14,17 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
             _connectionStringProvider = connectionStringProvider;
         }
 
+        public PedidosDbContext(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_connectionStringProvider.GetConnectionString("DefaultConnection"));
+            if (!optionsBuilder.IsConfigured && !string.IsNullOrEmpty(_connectionString))
+            {
+                optionsBuilder.UseNpgsql(_connectionString);
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
