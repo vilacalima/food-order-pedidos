@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("5b18f441-a397-46c8-9890-0ca59b8e3b72")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoodOrder.Pedidos.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9ab2acbd0e24bca1577c0f2010d04175c66c792")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f08db770c718d2233685fa88d99f83153c3ba97c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodOrder.Pedidos.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoodOrder.Pedidos.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

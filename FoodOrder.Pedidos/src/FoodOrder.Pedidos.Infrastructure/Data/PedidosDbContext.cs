@@ -39,6 +39,8 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
 
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<PedidoStatus> PedidoStatus { get; set; }
-    
+        public DbSet<Sacola> Sacola { get; set; }
+        public DbSet<SacolaProduto> SacolasProdutos { get; set; }
+
     }
 }

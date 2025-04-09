@@ -1,9 +1,17 @@
+using FoodOrder.Pedidos.Application.Interface;
+using FoodOrder.Pedidos.Application.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient<IProdutoHttpService, ProdutoHttpService>(client =>
+{
+    client.BaseAddress = new Uri("https://sua-api-externa.com/api/"); //trocar a rota
+});
 
 var app = builder.Build();
 

@@ -1,0 +1,41 @@
+﻿using FoodOrder.Pedidos.Domain.Entities;
+using FoodOrder.Pedidos.Domain.Repository;
+using FoodOrder.Pedidos.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
+namespace FoodOrder.Pedidos.Infrastructure.Repository
+{
+    public class PedidoStatusRepository(PedidosDbContext context) : IPedidoStatusRepository
+    {
+        private readonly PedidosDbContext _context = context;
+
+        public async Task<PedidoStatus> Cadastrar(PedidoStatus pedidoStatus)
+        {
+            if (pedidoStatus == null) throw new ArgumentNullException(nameof(pedidoStatus));
+
+            var pedidoStatusBase = await ConsultarPorStatus(pedidoStatus.Descricao);
+
+            if (pedidoStatusBase == null)
+            {
+                await _context.PedidoStatus.AddAsync(pedidoStatus);
+                await _context.SaveChangesAsync();
+                return pedidoStatus;
+            }
+            else
+            {
+                return pedidoStatusBase;
+            }
+        }
+
+        public async Task<PedidoStatus?> ConsultarPorStatus(string status)
+        {
+            var pedidoStatus = await _context.PedidoStatus.Where(x => x.Descricao == status).ToListAsync();
+            return pedidoStatus.FirstOrDefault();
+        }
+
+        public async Task<PedidoStatus?> ConsultarPorId(int id)
+        {
+            return await _context.PedidoStatus.FirstOrDefaultAsync(x => x.Id == id);
+        }
+    }
+}

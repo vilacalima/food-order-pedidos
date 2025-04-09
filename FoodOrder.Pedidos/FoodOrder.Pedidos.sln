@@ -5,21 +5,20 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1826D5F8-F863-42A0-B4B0-DDCA3F97288F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrder.Pedidos.Presentation", "src\FoodOrder.Pedidos.Presentation\FoodOrder.Pedidos.Presentation.csproj", "{01CBB2E2-7A50-446A-90C1-5349E63E54E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodOrder.Pedidos.Presentation", "src\FoodOrder.Pedidos.Presentation\FoodOrder.Pedidos.Presentation.csproj", "{01CBB2E2-7A50-446A-90C1-5349E63E54E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrder.Pedidos.Application", "src\FoodOrder.Pedidos.Application\FoodOrder.Pedidos.Application.csproj", "{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodOrder.Pedidos.Application", "src\FoodOrder.Pedidos.Application\FoodOrder.Pedidos.Application.csproj", "{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrder.Pedidos.Domain", "src\FoodOrder.Pedidos.Domain\FoodOrder.Pedidos.Domain.csproj", "{E84CDD39-C475-4211-BE4A-C8863FA60D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodOrder.Pedidos.Domain", "src\FoodOrder.Pedidos.Domain\FoodOrder.Pedidos.Domain.csproj", "{E84CDD39-C475-4211-BE4A-C8863FA60D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrder.Pedidos.Infrastructure", "src\FoodOrder.Pedidos.Infrastructure\FoodOrder.Pedidos.Infrastructure.csproj", "{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodOrder.Pedidos.Infrastructure", "src\FoodOrder.Pedidos.Infrastructure\FoodOrder.Pedidos.Infrastructure.csproj", "{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{FE3CFD18-7425-4677-81B0-DF0C665B79C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{01CBB2E2-7A50-446A-90C1-5349E63E54E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,6 +37,13 @@ Global
 		{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE3CFD18-7425-4677-81B0-DF0C665B79C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3CFD18-7425-4677-81B0-DF0C665B79C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3CFD18-7425-4677-81B0-DF0C665B79C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3CFD18-7425-4677-81B0-DF0C665B79C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01CBB2E2-7A50-446A-90C1-5349E63E54E3} = {1826D5F8-F863-42A0-B4B0-DDCA3F97288F}

@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  foodorder.pedidos.presentation:
+    image: foodorderpedidospresentation
+    build:
+      context: .
+      dockerfile: src/FoodOrder.Pedidos.Presentation/Dockerfile
+    ports:
+      - "8080:80"        # Porta externa 5000 mapeada pra 80 do container
+    depends_on:
+      - postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+    networks:
+      - foodorder-network
+
+  postgres:
+    image: postgres:16
+    container_name: foodorder_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=foodorder_pedidos_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - foodorder-network
+
+volumes:
+  pgdata:
+
+networks:
+  foodorder-network:
+    driver: bridge
