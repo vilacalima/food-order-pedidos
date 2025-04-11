@@ -20,24 +20,24 @@ namespace FoodOrder.Pedidos.Infrastructure.Messaging.Consumers
                     WaitTimeSeconds = 10
                 };
 
-                var response = await _sqsClient.ReceiveMessageAsync(request, stoppingToken);
+                //var response = await _sqsClient.ReceiveMessageAsync(request, stoppingToken);
 
-                foreach (var message in response.Messages)
-                {
-                    try
-                    {
-                        Console.WriteLine($"Mensagem recebida: {message.Body}");
+                //foreach (var message in response.Messages)
+                //{
+                //    try
+                //    {
+                //        Console.WriteLine($"Mensagem recebida: {message.Body}");
 
-                        // TODO: Processar a mensagem aqui...
+                //        // TODO: Processar a mensagem aqui...
 
-                        // Apagar a mensagem da fila após o processamento
-                        await _sqsClient.DeleteMessageAsync(_queueUrl, message.ReceiptHandle, stoppingToken);
-                    }
-                    catch (Exception)
-                    {
-                        throw;
-                    }
-                }
+                //        // Apagar a mensagem da fila após o processamento
+                //        await _sqsClient.DeleteMessageAsync(_queueUrl, message.ReceiptHandle, stoppingToken);
+                //    }
+                //    catch (Exception)
+                //    {
+                //        throw;
+                //    }
+                //}
             }
         }
     }

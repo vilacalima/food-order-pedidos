@@ -12,7 +12,8 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_HTTP_PORTS: "8080"
       ASPNETCORE_HTTPS_PORTS: "8081"
-      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      AWS_PROFILE: default
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5438;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
     image: foodorderpedidospresentation
     networks:
       foodorder-network: null
@@ -29,6 +30,12 @@ services:
         protocol: tcp
     volumes:
       - type: bind
+        source: C:\Users\robso\.aws
+        target: /root/.aws
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
         source: C:\Users\robso\AppData\Roaming/Microsoft/UserSecrets
         target: /home/app/.microsoft/usersecrets
         read_only: true
@@ -41,7 +48,7 @@ services:
         bind:
           create_host_path: true
   postgres:
-    container_name: foodorder_postgres
+    container_name: foodorder_pedidos_postgres
     environment:
       POSTGRES_DB: foodorder_pedidos_db
       POSTGRES_PASSWORD: postgres
@@ -52,7 +59,7 @@ services:
     ports:
       - mode: ingress
         target: 5432
-        published: "5433"
+        published: "5438"
         protocol: tcp
     volumes:
       - type: volume

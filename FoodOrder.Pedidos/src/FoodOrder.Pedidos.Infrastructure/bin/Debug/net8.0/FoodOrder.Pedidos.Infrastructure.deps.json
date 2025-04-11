@@ -8,8 +8,10 @@
     ".NETCoreApp,Version=v8.0": {
       "FoodOrder.Pedidos.Infrastructure/1.0.0": {
         "dependencies": {
-          "AWSSDK.SQS": "3.7.400.130",
+          "AWSSDK.Extensions.NETCore.Setup": "3.7.400",
+          "AWSSDK.SQS": "3.7.400.132",
           "FoodOrder.Pedidos.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.4",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Polly": "8.5.2"
@@ -18,22 +20,36 @@
           "FoodOrder.Pedidos.Infrastructure.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.402.36": {
+      "AWSSDK.Core/3.7.402.38": {
         "runtime": {
           "lib/net8.0/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.402.36"
+            "fileVersion": "3.7.402.38"
           }
         }
       },
-      "AWSSDK.SQS/3.7.400.130": {
+      "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.402.36"
+          "AWSSDK.Core": "3.7.402.38",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.4"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.0"
+          }
+        }
+      },
+      "AWSSDK.SQS/3.7.400.132": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.402.38"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.SQS.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.400.130"
+            "fileVersion": "3.7.400.132"
           }
         }
       },
@@ -106,6 +122,17 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.425.16305"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/9.0.4": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Binder.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.425.16305"
           }
@@ -281,19 +308,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWSSDK.Core/3.7.402.36": {
+    "AWSSDK.Core/3.7.402.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xrsw7P8z8ZxClciRXY4Rdb31FLhuXq57IGAisb0C15cClM/gThyy2Us0dnS0gXPdSOYuC21fk/pmLX+GDRopFw==",
-      "path": "awssdk.core/3.7.402.36",
-      "hashPath": "awssdk.core.3.7.402.36.nupkg.sha512"
+      "sha512": "sha512-DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
+      "path": "awssdk.core/3.7.402.38",
+      "hashPath": "awssdk.core.3.7.402.38.nupkg.sha512"
     },
-    "AWSSDK.SQS/3.7.400.130": {
+    "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3DXq8tPncDwgBmJgi0TozFoitpnA/oXkMPcWh/n1QQOBkBD9ofT64V2IChCyvKDHn8FScUaH4XkdpZ8QlIq8uQ==",
-      "path": "awssdk.sqs/3.7.400.130",
-      "hashPath": "awssdk.sqs.3.7.400.130.nupkg.sha512"
+      "sha512": "sha512-i4ta6n+QuGKt1RBCIbRU2wohz5DYJ+wRPR9EI7YkzC8eaWSbmMXTNL+s4HpYUsoxM7uyUrYoW0gC52/9KnK7xw==",
+      "path": "awssdk.extensions.netcore.setup/3.7.400",
+      "hashPath": "awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512"
+    },
+    "AWSSDK.SQS/3.7.400.132": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
+      "path": "awssdk.sqs/3.7.400.132",
+      "hashPath": "awssdk.sqs.3.7.400.132.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/9.0.1": {
       "type": "package",
@@ -343,6 +377,13 @@
       "sha512": "sha512-0LN/DiIKvBrkqp7gkF3qhGIeZk6/B63PthAHjQsxymJfIBcz0kbf4/p/t4lMgggVxZ+flRi5xvTwlpPOoZk8fg==",
       "path": "microsoft.extensions.configuration.abstractions/9.0.4",
       "hashPath": "microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/9.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cdrjcl9RIcwt3ECbnpP0Gt1+pkjdW90mq5yFYy8D9qRj2NqFFcv3yDp141iEamsd9E218sGxK8WHaIOcrqgDJg==",
+      "path": "microsoft.extensions.configuration.binder/9.0.4",
+      "hashPath": "microsoft.extensions.configuration.binder.9.0.4.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/9.0.1": {
       "type": "package",

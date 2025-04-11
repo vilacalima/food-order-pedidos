@@ -15,10 +15,5 @@ namespace FoodOrder.Pedidos.Infrastructure.DesignTime
         {
             return _connectionString;
         }
-
-        public string GetConnectionString(string name)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

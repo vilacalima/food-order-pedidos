@@ -1,4 +1,5 @@
 ﻿using FoodOrder.Pedidos.Infrastructure.Configurations;
+using Microsoft.Extensions.Configuration;
 
 namespace FoodOrder.Pedidos.Presentation.Services
 {
@@ -11,18 +12,14 @@ namespace FoodOrder.Pedidos.Presentation.Services
             _configuration = configuration;
         }
 
-        public string GetConnectionString(string name)
+        public string GetConnectionString()
         {
-            if (string.IsNullOrEmpty(name))
-                throw new ArgumentNullException(nameof(name), "O nome da connection string não pode ser nulo ou vazio.");
-
-            var connectionString = _configuration.GetConnectionString(name);
+            var connectionString = _configuration.GetConnectionString("DefaultConnection");
 
             if (string.IsNullOrEmpty(connectionString))
-                throw new InvalidOperationException($"Connection string '{name}' não encontrada.");
+                throw new InvalidOperationException("Connection string 'DefaultConnection' não encontrada.");
 
             return connectionString!;
         }
-
     }
 }

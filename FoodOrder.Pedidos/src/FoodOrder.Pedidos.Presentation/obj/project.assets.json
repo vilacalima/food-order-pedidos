@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "AWSSDK.Core/3.7.402.36": {
+      "AWSSDK.Core/3.7.402.38": {
         "type": "package",
         "compile": {
           "lib/net8.0/AWSSDK.Core.dll": {
@@ -34,10 +34,10 @@
           }
         }
       },
-      "AWSSDK.SQS/3.7.400.130": {
+      "AWSSDK.SQS/3.7.400.132": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.36, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.38, 4.0.0)"
         },
         "compile": {
           "lib/net8.0/AWSSDK.SQS.dll": {
@@ -1356,6 +1356,7 @@
           "FoodOrder.Pedidos.Domain": "1.0.0",
           "FoodOrder.Pedidos.Infrastructure": "1.0.0",
           "MediatR": "12.5.0",
+          "Microsoft.Extensions.Http": "9.0.4",
           "Polly": "8.5.2"
         },
         "compile": {
@@ -1379,8 +1380,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "AWSSDK.SQS": "3.7.400.130",
+          "AWSSDK.Extensions.NETCore.Setup": "3.7.400",
+          "AWSSDK.SQS": "3.7.400.132",
           "FoodOrder.Pedidos.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.4",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Polly": "8.5.2"
@@ -1395,15 +1398,15 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.402.36": {
-      "sha512": "Xrsw7P8z8ZxClciRXY4Rdb31FLhuXq57IGAisb0C15cClM/gThyy2Us0dnS0gXPdSOYuC21fk/pmLX+GDRopFw==",
+    "AWSSDK.Core/3.7.402.38": {
+      "sha512": "DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
       "type": "package",
-      "path": "awssdk.core/3.7.402.36",
+      "path": "awssdk.core/3.7.402.38",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.402.36.nupkg.sha512",
+        "awssdk.core.3.7.402.38.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
         "lib/net35/AWSSDK.Core.dll",
@@ -1442,17 +1445,17 @@
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
       ]
     },
-    "AWSSDK.SQS/3.7.400.130": {
-      "sha512": "3DXq8tPncDwgBmJgi0TozFoitpnA/oXkMPcWh/n1QQOBkBD9ofT64V2IChCyvKDHn8FScUaH4XkdpZ8QlIq8uQ==",
+    "AWSSDK.SQS/3.7.400.132": {
+      "sha512": "BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
       "type": "package",
-      "path": "awssdk.sqs/3.7.400.130",
+      "path": "awssdk.sqs/3.7.400.132",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SQS.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.sqs.3.7.400.130.nupkg.sha512",
+        "awssdk.sqs.3.7.400.132.nupkg.sha512",
         "awssdk.sqs.nuspec",
         "images/AWSLogo.png",
         "lib/net35/AWSSDK.SQS.dll",
@@ -4152,11 +4155,12 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AWSSDK.Extensions.NETCore.Setup >= 3.7.400",
-      "AWSSDK.SQS >= 3.7.400.130",
+      "AWSSDK.SQS >= 3.7.400.132",
       "FoodOrder.Pedidos.Application >= 1.0.0",
       "MediatR >= 12.5.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
+      "Microsoft.Extensions.Configuration.Binder >= 9.0.4",
       "Microsoft.Extensions.Http >= 9.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -4217,7 +4221,7 @@
           },
           "AWSSDK.SQS": {
             "target": "Package",
-            "version": "[3.7.400.130, )"
+            "version": "[3.7.400.132, )"
           },
           "MediatR": {
             "target": "Package",
@@ -4230,6 +4234,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "Microsoft.Extensions.Configuration.Binder": {
             "target": "Package",
             "version": "[9.0.4, )"
           },

@@ -9,11 +9,12 @@
       "FoodOrder.Pedidos.Presentation/1.0.0": {
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": "3.7.400",
-          "AWSSDK.SQS": "3.7.400.130",
+          "AWSSDK.SQS": "3.7.400.132",
           "FoodOrder.Pedidos.Application": "1.0.0",
           "MediatR": "12.5.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "9.0.4",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.4",
           "Microsoft.Extensions.Http": "9.0.4",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -22,17 +23,17 @@
           "FoodOrder.Pedidos.Presentation.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.402.36": {
+      "AWSSDK.Core/3.7.402.38": {
         "runtime": {
           "lib/net8.0/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.402.36"
+            "fileVersion": "3.7.402.38"
           }
         }
       },
       "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.402.36",
+          "AWSSDK.Core": "3.7.402.38",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.4"
@@ -44,14 +45,14 @@
           }
         }
       },
-      "AWSSDK.SQS/3.7.400.130": {
+      "AWSSDK.SQS/3.7.400.132": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.402.36"
+          "AWSSDK.Core": "3.7.402.38"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.SQS.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.400.130"
+            "fileVersion": "3.7.400.132"
           }
         }
       },
@@ -896,6 +897,7 @@
           "FoodOrder.Pedidos.Domain": "1.0.0",
           "FoodOrder.Pedidos.Infrastructure": "1.0.0",
           "MediatR": "12.5.0",
+          "Microsoft.Extensions.Http": "9.0.4",
           "Polly": "8.5.2"
         },
         "runtime": {
@@ -915,8 +917,10 @@
       },
       "FoodOrder.Pedidos.Infrastructure/1.0.0": {
         "dependencies": {
-          "AWSSDK.SQS": "3.7.400.130",
+          "AWSSDK.Extensions.NETCore.Setup": "3.7.400",
+          "AWSSDK.SQS": "3.7.400.132",
           "FoodOrder.Pedidos.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "9.0.4",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.4",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Polly": "8.5.2"
@@ -936,12 +940,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWSSDK.Core/3.7.402.36": {
+    "AWSSDK.Core/3.7.402.38": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xrsw7P8z8ZxClciRXY4Rdb31FLhuXq57IGAisb0C15cClM/gThyy2Us0dnS0gXPdSOYuC21fk/pmLX+GDRopFw==",
-      "path": "awssdk.core/3.7.402.36",
-      "hashPath": "awssdk.core.3.7.402.36.nupkg.sha512"
+      "sha512": "sha512-DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
+      "path": "awssdk.core/3.7.402.38",
+      "hashPath": "awssdk.core.3.7.402.38.nupkg.sha512"
     },
     "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
       "type": "package",
@@ -950,12 +954,12 @@
       "path": "awssdk.extensions.netcore.setup/3.7.400",
       "hashPath": "awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512"
     },
-    "AWSSDK.SQS/3.7.400.130": {
+    "AWSSDK.SQS/3.7.400.132": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3DXq8tPncDwgBmJgi0TozFoitpnA/oXkMPcWh/n1QQOBkBD9ofT64V2IChCyvKDHn8FScUaH4XkdpZ8QlIq8uQ==",
-      "path": "awssdk.sqs/3.7.400.130",
-      "hashPath": "awssdk.sqs.3.7.400.130.nupkg.sha512"
+      "sha512": "sha512-BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
+      "path": "awssdk.sqs/3.7.400.132",
+      "hashPath": "awssdk.sqs.3.7.400.132.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

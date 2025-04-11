@@ -7,20 +7,23 @@ services:
       context: .
       dockerfile: src/FoodOrder.Pedidos.Presentation/Dockerfile
     ports:
-      - "8080:80"        # Porta externa 5000 mapeada pra 80 do container
+      - "8080:80"  # Porta externa 8080 mapeada pra 80 do container
     depends_on:
       - postgres
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5433;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5438;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      - AWS_PROFILE=default
+    volumes:
+      - ~/.aws/:/root/.aws:ro
     networks:
       - foodorder-network
 
   postgres:
     image: postgres:16
-    container_name: foodorder_postgres
+    container_name: foodorder_pedidos_postgres
     ports:
-      - "5433:5432"
+      - "5438:5432"
     environment:
       - POSTGRES_DB=foodorder_pedidos_db
       - POSTGRES_USER=postgres

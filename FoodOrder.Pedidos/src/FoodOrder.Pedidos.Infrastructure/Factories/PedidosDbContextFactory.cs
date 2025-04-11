@@ -1,4 +1,5 @@
 ﻿using FoodOrder.Pedidos.Infrastructure.Data;
+using FoodOrder.Pedidos.Infrastructure.DesignTime;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -10,20 +11,16 @@ namespace FoodOrder.Pedidos.Infrastructure.Factories
         {
             var optionsBuilder = new DbContextOptionsBuilder<PedidosDbContext>();
 
-            // Pegando a connection string da variável de ambiente
-            var connectionString = Environment.GetEnvironmentVariable("DEFAULT_CONNECTION");
+            var connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
 
             if (string.IsNullOrEmpty(connectionString))
             {
-                throw new InvalidOperationException("A variável de ambiente 'DEFAULT_CONNECTION' não foi definida.");
+                throw new InvalidOperationException("A variável de ambiente 'DefaultConnection' não foi definida.");
             }
 
             optionsBuilder.UseNpgsql(connectionString);
 
-            // Cria um mock de IConnectionStringProvider só para fins de migração
-            var connectionStringProvider = new MockConnectionStringProvider(connectionString);
-
-            return new PedidosDbContext(connectionStringProvider);
+            return new PedidosDbContext(optionsBuilder.Options);
         }
     }
 }

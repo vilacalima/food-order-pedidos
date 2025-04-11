@@ -27,7 +27,8 @@ services:
       ASPNETCORE_HTTP_PORTS: "8080"
       ASPNETCORE_HTTPS_PORTS: "8081"
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      AWS_PROFILE: default
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5438;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: ""
     image: foodorderpedidospresentation:dev
@@ -51,6 +52,12 @@ services:
         protocol: tcp
     tty: true
     volumes:
+      - type: bind
+        source: C:\Users\robso\.aws
+        target: /root/.aws
+        read_only: true
+        bind:
+          create_host_path: true
       - type: bind
         source: C:\Users\robso\AppData\Roaming\Microsoft\UserSecrets
         target: /home/app/.microsoft/usersecrets
@@ -109,7 +116,7 @@ services:
         bind:
           create_host_path: true
   postgres:
-    container_name: foodorder_postgres
+    container_name: foodorder_pedidos_postgres
     environment:
       POSTGRES_DB: foodorder_pedidos_db
       POSTGRES_PASSWORD: postgres
@@ -120,7 +127,7 @@ services:
     ports:
       - mode: ingress
         target: 5432
-        published: "5433"
+        published: "5438"
         protocol: tcp
     volumes:
       - type: volume

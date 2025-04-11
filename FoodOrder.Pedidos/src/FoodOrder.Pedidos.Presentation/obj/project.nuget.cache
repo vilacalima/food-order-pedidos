@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MlwpH7OoXh4=",
+  "dgSpecHash": "+0qESaFhx0E=",
   "success": true,
   "projectFilePath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\3.7.402.36\\awssdk.core.3.7.402.36.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\3.7.402.38\\awssdk.core.3.7.402.38.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.400\\awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512",
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\3.7.400.130\\awssdk.sqs.3.7.400.130.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\3.7.400.132\\awssdk.sqs.3.7.400.132.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

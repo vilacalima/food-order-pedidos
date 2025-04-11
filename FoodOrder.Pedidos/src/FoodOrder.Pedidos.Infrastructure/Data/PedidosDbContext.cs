@@ -6,24 +6,24 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
 {
     public class PedidosDbContext : DbContext
     {
-        private readonly string _connectionString;
         private readonly IConnectionStringProvider _connectionStringProvider;
 
-        public PedidosDbContext(IConnectionStringProvider connectionStringProvider)
+        public PedidosDbContext(DbContextOptions<PedidosDbContext> options) : base(options)
         {
-            _connectionStringProvider = connectionStringProvider;
-        }
-
-        public PedidosDbContext(string connectionString)
-        {
-            _connectionString = connectionString;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured && !string.IsNullOrEmpty(_connectionString))
+            // Só configura se ainda não tiver sido configurado externamente (como nas migrations)
+            if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql(_connectionString);
+                var connectionString = _connectionStringProvider?.GetConnectionString();
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    throw new InvalidOperationException("A connection string não foi fornecida.");
+                }
+
+                optionsBuilder.UseNpgsql(connectionString);
             }
         }
 
@@ -50,6 +50,5 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
         public DbSet<PedidoStatus> PedidoStatus { get; set; }
         public DbSet<Sacola> Sacola { get; set; }
         public DbSet<SacolaProduto> SacolasProdutos { get; set; }
-
     }
 }

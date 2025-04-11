@@ -1,0 +1,12 @@
+# Caminho completo para os projetos
+$infrastructureProject = "./src/FoodOrder.Pedidos.Infrastructure/FoodOrder.Pedidos.Infrastructure.csproj"
+$startupProject = "./src/FoodOrder.Pedidos.Presentation/FoodOrder.Pedidos.Presentation.csproj"
+
+# Setando a variável de ambiente para usar no DesignTimeDbContextFactory
+$env:DefaultConnection = "Host=localhost;Port=5438;Database=foodorder_pedidos_db;Username=postgres;Password=postgres"
+
+Write-Host "Rodando atualização do banco de dados com EF Core..."
+
+dotnet ef database update --project $infrastructureProject --startup-project $startupProject
+
+Write-Host "Atualização concluída."
