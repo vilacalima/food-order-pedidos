@@ -10,20 +10,23 @@ namespace FoodOrder.Pedidos.Application.DTOs.Pedidos
     {
         public PedidosOutput() 
         {
-            Pronto = new List<PedidoOutput>();
-            EmPreparo = new List<PedidoOutput>();
-            Recebido = new List<PedidoOutput>();
+            Pronto = [];
+            EmPreparacao = [];
+            Recebido = [];
+            Finalizado = [];
         }
 
-        public PedidosOutput(List<PedidoOutput> pronto, List<PedidoOutput> emPreparo, List<PedidoOutput> recebido)
+        public PedidosOutput(List<PedidoOutput> pronto, List<PedidoOutput> emPreparo, List<PedidoOutput> recebido, List<PedidoOutput> finalizado)
         {
             Pronto = pronto;
-            EmPreparo = emPreparo;
+            EmPreparacao = emPreparo;
             Recebido = recebido;
+            Finalizado = finalizado;
         }
 
-        public List<PedidoOutput> Pronto { get; set; }
-        public List<PedidoOutput> EmPreparo { get; set; }
-        public List<PedidoOutput> Recebido { get; set; }
+        public List<PedidoOutput> Pronto { get; set; } 
+        public List<PedidoOutput> EmPreparacao { get; set; } 
+        public List<PedidoOutput> Recebido { get; set; } 
+        public List<PedidoOutput> Finalizado { get; set; } 
     }
 }

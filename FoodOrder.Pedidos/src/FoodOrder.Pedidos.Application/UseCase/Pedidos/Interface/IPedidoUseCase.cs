@@ -7,7 +7,6 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos.Interface
     {
         Task<PedidosOutput> ListarPedidos();
         Task<PedidoOutput> Consultar(int numeroPedido);
-        Task<PedidoStatusOutput> ConsultarStatus(string status);
         Task Atualizar(PedidoOutput pedido);
     }
 }

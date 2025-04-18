@@ -26,5 +26,13 @@ namespace FoodOrder.Pedidos.Presentation.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
+        [HttpPut]
+        [Route("AtualizarStatuspagamento")]
+        public async Task<IActionResult> AtualizarStatuspagamento([FromBody] UpdateStatusPagamentoCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
     }
 }

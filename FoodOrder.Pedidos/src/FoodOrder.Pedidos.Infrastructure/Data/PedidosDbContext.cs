@@ -40,7 +40,7 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
                 entity.Property(p => p.NumeroPedido)
                       .HasDefaultValueSql("nextval('public.numero_pedido_seq')");
                 entity.Property(p => p.ClienteId).IsRequired();
-                entity.Property(p => p.PedidoStatusId).IsRequired();
+                entity.Property(p => p.PedidoStatus).IsRequired();
             });
 
             base.OnModelCreating(modelBuilder);

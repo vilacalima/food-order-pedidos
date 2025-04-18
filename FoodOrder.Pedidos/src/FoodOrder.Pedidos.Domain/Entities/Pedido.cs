@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FoodOrder.Pedidos.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -10,13 +11,13 @@ namespace FoodOrder.Pedidos.Domain.Entities
         {
         }
 
-        public Pedido(TimeSpan tempoEspera, Guid clienteId, int pagamentoId, int pedidoStatusId, int sacolaId)
+        public Pedido(TimeSpan tempoEspera, Guid clienteId, PagamentoStatusEnum pagamentoStatus, PedidoStatusEnum pedidoStatus, int sacolaId)
         {
             TempoEspera = tempoEspera;
             DataCriacao = DateTime.UtcNow;
             ClienteId = clienteId;
-            PagamentoId = pagamentoId;
-            PedidoStatusId = pedidoStatusId;
+            PagamentoStatus = pagamentoStatus;
+            PedidoStatus = pedidoStatus;
             SacolaId = sacolaId;
         }
 
@@ -35,10 +36,10 @@ namespace FoodOrder.Pedidos.Domain.Entities
         public Guid ClienteId { get; set; }
 
         [ForeignKey("PagamentoId")]
-        public int PagamentoId { get; set; }
+        public PagamentoStatusEnum PagamentoStatus { get; set; }
 
         [ForeignKey("PedidoStatusId")]
-        public int PedidoStatusId { get; set; }
+        public PedidoStatusEnum PedidoStatus { get; set; }
 
         [ForeignKey("SacolaId")]
         public int SacolaId { get; set; }

@@ -1,5 +1,6 @@
 ﻿using FoodOrder.Pedidos.Application.DTOs.PedidoStatus;
 using FoodOrder.Pedidos.Application.DTOs.Produto;
+using FoodOrder.Pedidos.Domain.Enums;
 
 namespace FoodOrder.Pedidos.Application.DTOs.Pedidos
 {
@@ -15,14 +16,15 @@ namespace FoodOrder.Pedidos.Application.DTOs.Pedidos
 
         public Guid? ClienteId { get; set; }
 
-        public int? PagamentoId { get; set; }
+        public PedidoStatusEnum PedidoStatus { get; set; }
 
-        public PedidoStatusOutput? PedidoStatus { get; private set; }
+        public PagamentoStatusEnum PagamentoStatus { get; set; }
 
         public int? SacolaId { get; set; }
 
         public List<ProdutoOutput> Produtos { get; set; } = [];
 
-        public void SetPedidoStatus(PedidoStatusOutput pedidoStatus) => PedidoStatus = pedidoStatus;
+        public void SetPedidoStatus(PedidoStatusEnum pedidoStatus) => PedidoStatus = pedidoStatus;
+        public void SetPagamentoStatus(PagamentoStatusEnum status) => PagamentoStatus = status;
     }
 }

@@ -6,28 +6,28 @@ using MediatR;
 
 namespace FoodOrder.Pedidos.Application.Feature.Pedidos
 {
-    public class UpdateStatusPedidoCommand(int numeroPedido, PedidoStatusEnum status) : IRequest<Unit>
+    public class UpdateStatusPagamentoCommand(int numeroPedido, PagamentoStatusEnum status) : IRequest<Unit>
     {
         public int NumeroPedido { get; set; } = numeroPedido;
-        public PedidoStatusEnum Status { get; set; } = status;
+        public PagamentoStatusEnum Status { get; set; } = status;
     }
 
-    public class UpdateStatusPedidoCommandHandler : IRequestHandler<UpdateStatusPedidoCommand, Unit>
+    public class UpdateStatusPagamentoCommandHandler : IRequestHandler<UpdateStatusPagamentoCommand, Unit>
     {
         private readonly IPedidoUseCase _pedidoUseCase;
 
-        public UpdateStatusPedidoCommandHandler(IPedidoUseCase pedidoUseCase)
+        public UpdateStatusPagamentoCommandHandler(IPedidoUseCase pedidoUseCase)
         {
             _pedidoUseCase = pedidoUseCase;
         }
 
-        public async Task<Unit> Handle(UpdateStatusPedidoCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdateStatusPagamentoCommand request, CancellationToken cancellationToken)
         {
             try
             {
                 PedidoOutput pedido = await ConsultarPedido(request);
 
-                pedido.SetPedidoStatus(request.Status);
+                pedido.SetPagamentoStatus(request.Status);
 
                 await _pedidoUseCase.Atualizar(pedido);
 
@@ -39,7 +39,7 @@ namespace FoodOrder.Pedidos.Application.Feature.Pedidos
             }
         }
 
-        private async Task<PedidoOutput> ConsultarPedido(UpdateStatusPedidoCommand request)
+        private async Task<PedidoOutput> ConsultarPedido(UpdateStatusPagamentoCommand request)
         {
             var pedido = await _pedidoUseCase.Consultar(request.NumeroPedido);
 

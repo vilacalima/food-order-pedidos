@@ -35,6 +35,8 @@ namespace FoodOrder.Pedidos.Infrastructure.Repository
 
         public async Task Atualizar(Pedido pedido)
         {
+            var pedidoExistente = await ConsultarPedidoPorNumero(pedido.NumeroPedido) ?? throw new KeyNotFoundException($"Pedido com número {pedido.NumeroPedido} não encontrado.");
+            
             _context.Pedidos.Update(pedido);
             await _context.SaveChangesAsync();
         }

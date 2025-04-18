@@ -1,10 +1,8 @@
-using FoodOrder.Pedidos.Application.DependencyInjection;
 using FoodOrder.Pedidos.Application.UseCase.Pedidos;
 using FoodOrder.Pedidos.Application.UseCase.Pedidos.Interface;
 using FoodOrder.Pedidos.Domain.Repository;
 using FoodOrder.Pedidos.Infrastructure.Configurations;
 using FoodOrder.Pedidos.Infrastructure.Data;
-using FoodOrder.Pedidos.Infrastructure.DependencyInjection;
 using FoodOrder.Pedidos.Infrastructure.Repository;
 using FoodOrder.Pedidos.Presentation.Services;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +21,6 @@ builder.Services.AddTransient<IPedidoUseCase, PedidoUseCase>();
 builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddTransient<ISacolaRepository, SacolaRepository>();
 builder.Services.AddTransient<ISacolaProdutoRepository, SacolaProdutoRepository>();
-builder.Services.AddTransient<IPedidoStatusRepository, PedidoStatusRepository>();
 
 //builder.Services.AddTransient<IPagtoWebhookUseCase, PagtoWebhookUseCase>();
 //builder.Services.AddHttpClient<IMercadoPagoExternalService, MercadoPagoExternalService>();
