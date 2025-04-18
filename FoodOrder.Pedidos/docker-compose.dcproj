@@ -6,8 +6,8 @@
     <DockerPublishLocally>False</DockerPublishLocally>
     <ProjectGuid>fe3cfd18-7425-4677-81b0-df0c665b79c1</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>foodorder.pedidos.presentation</DockerServiceName>
+    <DockerServiceUrl>http://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

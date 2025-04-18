@@ -1,0 +1,154 @@
+name: dockercompose5209125218663218594
+services:
+  foodorder.pedidos.presentation:
+    build:
+      context: C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos
+      dockerfile: src/FoodOrder.Pedidos.Presentation/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Debug
+        LAUNCHING_FROM_VS: "true"
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: FoodOrder.Pedidos.Presentation
+      target: base
+    command:
+      - sh
+      - -c
+      - until pg_isready -h postgres -p 5432 -U postgres; do echo 'Aguardando PostgreSQL...'; sleep 2; done && dotnet ef database update --project /app/src/FoodOrder.Pedidos.Infrastructure/FoodOrder.Pedidos.Infrastructure.csproj --startup-project /app/src/FoodOrder.Pedidos.Presentation/FoodOrder.Pedidos.Presentation.csproj && dotnet FoodOrder.Pedidos.Presentation.dll
+    container_name: foodorder.pedidos.api
+    depends_on:
+      postgres:
+        condition: service_started
+        required: true
+    entrypoint:
+      - dotnet
+      - --roll-forward
+      - Major
+      - /VSTools/DistrolessHelper/DistrolessHelper.dll
+      - --wait
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      AWS_PROFILE: default
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=foodorder_pedidos_db;Username=postgres;Password=postgres
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
+    image: foodorder.pedidos.api:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  "/app/bin/Debug/net8.0/FoodOrder.Pedidos.Presentation.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      foodorder-network: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "9010"
+        protocol: tcp
+      - mode: ingress
+        target: 9010
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: C:\Users\robso\.aws
+        target: /root/.aws
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\AppData\Roaming\Microsoft\UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\AppData\Roaming\ASP.NET\Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation
+        target: /app
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos
+        target: /src
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\vsdbg\vs2017u5
+        target: /remote_debugger
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\.nuget\packages
+        target: /.nuget/packages
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+        target: /.nuget/fallbackpackages
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\AppData\Roaming\ASP.NET\Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\robso\AppData\Roaming\Microsoft\UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0
+        target: /VSTools
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload
+        target: /HotReloadAgent
+        read_only: true
+        bind:
+          create_host_path: true
+    working_dir: /app
+  postgres:
+    container_name: foodorder_pedidos_postgres
+    environment:
+      POSTGRES_DB: foodorder_pedidos_db
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:16
+    networks:
+      foodorder-network: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5438"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: pgdata
+        target: /var/lib/postgresql/data
+        volume: {}
+networks:
+  foodorder-network:
+    name: dockercompose5209125218663218594_foodorder-network
+    driver: bridge
+volumes:
+  pgdata:
+    name: dockercompose5209125218663218594_pgdata

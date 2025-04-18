@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "FoodOrder.Pedidos.Presentation.Controllers.PedidoController",
+    "Method": "AtualizarStatusPedido",
+    "RelativePath": "Pedido/AtualizarStatusPedido",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "FoodOrder.Pedidos.Application.Feature.Pedidos.UpdateStatusPedidoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodOrder.Pedidos.Presentation.Controllers.PedidoController",
+    "Method": "ListarPedidos",
+    "RelativePath": "Pedido/ListarPedidos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
