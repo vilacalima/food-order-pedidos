@@ -1,13 +1,14 @@
 ﻿
 using Amazon.SQS;
 using Amazon.SQS.Model;
+using FoodOrder.Pedidos.Domain.Messaging;
 using Polly;
 using Polly.Retry;
 using System.Text.Json;
 
 namespace FoodOrder.Pedidos.Infrastructure.Messaging.Producers
 {
-    public class SqsMessageSender 
+    public class SqsMessageSender : ISqsMessageSender
     {
         private readonly IAmazonSQS _sqsClient;
         private readonly AsyncRetryPolicy _retryPolicy;

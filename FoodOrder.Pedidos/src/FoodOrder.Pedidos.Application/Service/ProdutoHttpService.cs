@@ -34,16 +34,15 @@ namespace FoodOrder.Pedidos.Application.Service
             });
         }
 
-        public async Task<ProdutoOutput?> ObterProdutoPorIdAsync(int id)
+        public async Task<ProdutoDto?> ObterProdutoPorIdAsync(int id)
         {
             return await _retryPolicy.ExecuteAsync(async () =>
             {
-                var response = await _httpClient.GetAsync($"produtos/{id}");
+                var response = await _httpClient.GetAsync($"Produtos/{id}");
                 if (!response.IsSuccessStatusCode) return null;
 
-                return await response.Content.ReadFromJsonAsync<ProdutoOutput>();
+                return await response.Content.ReadFromJsonAsync<ProdutoDto>();
             });
         }
-
     }
 }

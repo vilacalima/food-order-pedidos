@@ -1,0 +1,43 @@
+name: dockercompose5209125218663218594
+services:
+  api:
+    build:
+      context: C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos
+      dockerfile: src/FoodOrder.Pedidos.Presentation/Dockerfile
+    command:
+      - sh
+      - -c
+      - until pg_isready -h postgres -p 5432 -U postgres; do echo 'Aguardando PostgreSQL...'; sleep 2; done && dotnet ef database update --project /app/src/FoodOrder.Pedidos.Infrastructure/FoodOrder.Pedidos.Infrastructure.csproj --startup-project /app/src/FoodOrder.Pedidos.Presentation/FoodOrder.Pedidos.Presentation.csproj && dotnet FoodOrder.Pedidos.Presentation.dll
+    container_name: pedidos.api
+    depends_on:
+      pedidos.postgres:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "9010"
+    image: api
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "9010"
+        protocol: tcp
+  pedidos.postgres:
+    container_name: pedidos.postgres
+    environment:
+      POSTGRES_DB: foodorder_pedidos_db
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5438"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose5209125218663218594_default

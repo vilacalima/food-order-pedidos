@@ -4,6 +4,6 @@ namespace FoodOrder.Pedidos.Application.Interfaces
 {
     public interface IProdutoHttpService
     {
-        Task<ProdutoOutput?> ObterProdutoPorIdAsync(int id);
+        Task<ProdutoDto?> ObterProdutoPorIdAsync(int id);
     }
 }

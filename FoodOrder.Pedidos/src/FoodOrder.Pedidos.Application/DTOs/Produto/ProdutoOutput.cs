@@ -1,9 +1,22 @@
 ﻿namespace FoodOrder.Pedidos.Application.DTOs.Produto
 {
-    public class ProdutoOutput(int id, string nome, string descricao)
+    public class ProdutoOutput
     {
-        public int Id { get; set; } = id;
-        public string Nome { get; set; } = nome;
-        public string Descricao { get; set; } = descricao;
+        public ProdutoOutput()
+        {
+            Nome = string.Empty;
+            Descricao = string.Empty;
+        }
+
+        public ProdutoOutput(int id, string nome, string descricao)
+        {
+            Id = id;
+            Nome = nome;
+            Descricao = descricao;
+        }
+
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
     }
 }

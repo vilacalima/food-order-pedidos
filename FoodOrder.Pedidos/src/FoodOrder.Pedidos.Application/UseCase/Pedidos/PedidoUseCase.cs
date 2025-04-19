@@ -13,16 +13,19 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
     public class PedidoUseCase : IPedidoUseCase
     {
         private readonly IPedidoRepository _pedidosRepository;
+        private readonly ISacolaRepository _sacolaRepository;
         private readonly ISacolaProdutoRepository _sacolaProdutoRepository;
         private readonly IProdutoHttpService _produtoService;
 
         public PedidoUseCase(IPedidoRepository pedidosRepository, 
                             ISacolaProdutoRepository sacolaProdutoRepository,
-                            IProdutoHttpService produtoService)
+                            IProdutoHttpService produtoService,
+                            ISacolaRepository sacolaRepository)
         {
             _pedidosRepository = pedidosRepository;
             _sacolaProdutoRepository = sacolaProdutoRepository;
             _produtoService = produtoService;
+            _sacolaRepository = sacolaRepository;
         }
 
         public async Task<PedidosOutput> ListarPedidos()
@@ -58,6 +61,25 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
             await _pedidosRepository.Atualizar(pedido);
         }
 
+        public async Task<PedidoDto> CriarNovoPedido(List<int> produtos, Guid ClienteId)
+        {
+            var cadastrarSacola = await _sacolaRepository.Cadastrar(new Sacola());
+
+            await CadastraProdutoNaSacola(produtos, cadastrarSacola);
+
+            var produto = await BuscarProdutos(produtos);
+
+            var tempoPreparo = CalcularTempoPreparoParalelo(produto);
+
+            var pedido = new Pedido(tempoPreparo, ClienteId, PagamentoStatusEnum.AguardandoPagamento, PedidoStatusEnum.Recebido, cadastrarSacola.Id);
+
+            var pedidoCriado = await _pedidosRepository.Cadastrar(pedido);
+
+            var precoTotal = produto.Sum(x => x.Preco);
+
+            return new PedidoDto(numeroPedido: pedidoCriado, preco: precoTotal);
+        }
+
         #region Private Methods
         private async Task<PedidoOutput> BuildPedidoOutput(Pedido pedido)
         {
@@ -69,9 +91,10 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
             {
                 var produtoBase = await _produtoService.ObterProdutoPorIdAsync(SacolaProduto.ProdutoId);
 
-                if (produtoBase != null) // Ensure produtoBase is not null before adding
+                if (produtoBase != null)
                 {
-                    pedidoOutput.Produtos.Add(produtoBase);
+                    var mapperProduto = ProdutoMapper.Map(produtoBase);
+                    pedidoOutput.Produtos.Add(mapperProduto);
                 }
             }
 
@@ -107,6 +130,37 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
             return pedidosOutput;
         }
 
+        private async Task<List<ProdutoDto>> BuscarProdutos(List<int> produtos)
+        {
+            var listaProdutos = new List<ProdutoDto>();
+
+            foreach (var produtoId in produtos)
+            {
+                var produtoBase = await _produtoService.ObterProdutoPorIdAsync(produtoId)
+                    ?? throw new ArgumentNullException(nameof(produtos), "Produto não encontrado!");
+
+                listaProdutos.Add(produtoBase);
+            }
+
+            return listaProdutos;
+        }
+
+        private TimeSpan CalcularTempoPreparoParalelo(List<ProdutoDto> produtos)
+        {
+            var grupos = produtos.GroupBy(p => p.Tipo);
+            var tempoTotal = grupos.Sum(g => g.Max(p => p.TempoPreparo));
+
+            return TimeSpan.FromMinutes(tempoTotal);
+        }
+
+        private async Task CadastraProdutoNaSacola(List<int> produtos, Sacola cadastrarSacola)
+        {
+            foreach (var produtoId in produtos)
+            {
+                var sacolaProduto = new SacolaProduto(cadastrarSacola.Id, produtoId);
+                await _sacolaProdutoRepository.Cadastrar(sacolaProduto);
+            }
+        }
         #endregion
     }
 }
