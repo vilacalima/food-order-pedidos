@@ -61,6 +61,20 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos
             await _pedidosRepository.Atualizar(pedido);
         }
 
+        public async Task AtualizarStatusPedido(PedidoOutput pedidoAtualizado)
+        {
+            if (pedidoAtualizado == null || pedidoAtualizado.Id <= 0) return;
+
+            await _pedidosRepository.AtualizarStatusPedido(pedidoAtualizado.Id, pedidoAtualizado.PedidoStatus);
+        }
+
+        public async Task AtualizarStatusPagamento(PedidoOutput pedidoAtualizado)
+        {
+            if (pedidoAtualizado == null || pedidoAtualizado.Id <= 0) return;
+
+            await _pedidosRepository.AtualizarStatusPagamento(pedidoAtualizado.Id, pedidoAtualizado.PagamentoStatus);
+        }
+
         public async Task<PedidoDto> CriarNovoPedido(List<int> produtos, Guid ClienteId)
         {
             var cadastrarSacola = await _sacolaRepository.Cadastrar(new Sacola());

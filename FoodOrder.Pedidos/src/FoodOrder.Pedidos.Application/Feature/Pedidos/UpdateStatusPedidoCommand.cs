@@ -2,6 +2,7 @@
 using FoodOrder.Pedidos.Application.DTOs.PedidoStatus;
 using FoodOrder.Pedidos.Application.UseCase.Pedidos.Interface;
 using FoodOrder.Pedidos.Domain.Enums;
+using FoodOrder.Pedidos.Domain.Messaging;
 using MediatR;
 
 namespace FoodOrder.Pedidos.Application.Feature.Pedidos
@@ -15,7 +16,7 @@ namespace FoodOrder.Pedidos.Application.Feature.Pedidos
     public class UpdateStatusPedidoCommandHandler : IRequestHandler<UpdateStatusPedidoCommand, Unit>
     {
         private readonly IPedidoUseCase _pedidoUseCase;
-
+        
         public UpdateStatusPedidoCommandHandler(IPedidoUseCase pedidoUseCase)
         {
             _pedidoUseCase = pedidoUseCase;
@@ -29,8 +30,8 @@ namespace FoodOrder.Pedidos.Application.Feature.Pedidos
 
                 pedido.SetPedidoStatus(request.Status);
 
-                await _pedidoUseCase.Atualizar(pedido);
-
+                await _pedidoUseCase.AtualizarStatusPedido(pedido);
+                
                 return Unit.Value;
             }
             catch (Exception)

@@ -12,14 +12,6 @@ namespace FoodOrder.Pedidos.Presentation.Services
             _configuration = configuration;
         }
 
-        public string GetConnectionString()
-        {
-            var connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-            if (string.IsNullOrEmpty(connectionString))
-                throw new InvalidOperationException("Connection string 'DefaultConnection' não encontrada.");
-
-            return connectionString!;
-        }
+        public string GetConnectionString(string name) => _configuration.GetConnectionString(name);
     }
 }

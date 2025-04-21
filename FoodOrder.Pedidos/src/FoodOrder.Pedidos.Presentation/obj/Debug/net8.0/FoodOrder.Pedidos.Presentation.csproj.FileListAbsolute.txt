@@ -1,10 +1,3 @@
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.csproj.AssemblyReference.cache
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.AssemblyInfoInputs.cache
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.AssemblyInfo.cs
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.sourcelink.json
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\appsettings.json
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\FoodOrder.Pedidos.Presentation.staticwebassets.endpoints.json
@@ -141,7 +134,14 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\FoodOrder.Pedidos.Application.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\FoodOrder.Pedidos.Domain.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\FoodOrder.Pedidos.Infrastructure.pdb
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.csproj.AssemblyReference.cache
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.AssemblyInfoInputs.cache
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.AssemblyInfo.cs
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.csproj.CoreCompileInputs.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.sourcelink.json
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\scopedcss\bundle\FoodOrder.Pedidos.Presentation.styles.css
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.development.json
@@ -158,3 +158,4 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.genruntimeconfig.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\ref\FoodOrder.Pedidos.Presentation.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -1,5 +1,6 @@
 ﻿using FoodOrder.Pedidos.Application.DTOs.Produto;
 using FoodOrder.Pedidos.Application.Interfaces;
+using Microsoft.Extensions.Configuration;
 using Polly;
 using Polly.Retry;
 using System.Net.Http.Json;
@@ -9,15 +10,21 @@ namespace FoodOrder.Pedidos.Application.Service
     public class ProdutoHttpService : IProdutoHttpService
     {
         private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
         private readonly AsyncRetryPolicy _retryPolicy;
 
-        public ProdutoHttpService(HttpClient httpClient)
+        private string urlBase = string.Empty;
+
+        public ProdutoHttpService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
+            _configuration = configuration;
+
+            urlBase = _configuration["ExternalApis:ProdutosApi"] ?? string.Empty;
 
             _retryPolicy = Policy
                 .Handle<HttpRequestException>()
-                .Or<TaskCanceledException>() // Timeout
+                .Or<TaskCanceledException>()
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
         }
 
@@ -25,7 +32,7 @@ namespace FoodOrder.Pedidos.Application.Service
         {
             return await _retryPolicy.ExecuteAsync(async () =>
             {
-                var response = await _httpClient.GetAsync("produtos"); // endpoint da API externa
+                var response = await _httpClient.GetAsync($"{urlBase}/produtos"); // endpoint da API externa
 
                 response.EnsureSuccessStatusCode();
 
@@ -38,7 +45,7 @@ namespace FoodOrder.Pedidos.Application.Service
         {
             return await _retryPolicy.ExecuteAsync(async () =>
             {
-                var response = await _httpClient.GetAsync($"Produtos/{id}");
+                var response = await _httpClient.GetAsync($"{urlBase}/Produtos/{id}");
                 if (!response.IsSuccessStatusCode) return null;
 
                 return await response.Content.ReadFromJsonAsync<ProdutoDto>();

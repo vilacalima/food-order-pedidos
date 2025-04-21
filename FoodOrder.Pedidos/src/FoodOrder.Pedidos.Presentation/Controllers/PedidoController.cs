@@ -1,4 +1,5 @@
-﻿using FoodOrder.Pedidos.Application.Feature.Pedidos;
+﻿using FoodOrder.Pedidos.Application.Feature.Checkout;
+using FoodOrder.Pedidos.Application.Feature.Pedidos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,14 @@ namespace FoodOrder.Pedidos.Presentation.Controllers
         [HttpPut]
         [Route("AtualizarStatuspagamento")]
         public async Task<IActionResult> AtualizarStatuspagamento([FromBody] UpdateStatusPagamentoCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("Checkout")]
+        public async Task<IActionResult> Checkout([FromBody] CheckoutCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);

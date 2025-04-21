@@ -43,10 +43,10 @@ namespace FoodOrder.Pedidos.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasDefaultValueSql("nextval('public.numero_pedido_seq')");
 
-                    b.Property<int>("PagamentoId")
+                    b.Property<int>("PagamentoStatus")
                         .HasColumnType("integer");
 
-                    b.Property<int>("PedidoStatusId")
+                    b.Property<int>("PedidoStatus")
                         .HasColumnType("integer");
 
                     b.Property<int>("SacolaId")

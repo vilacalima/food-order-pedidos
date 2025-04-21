@@ -2,6 +2,7 @@
 using FoodOrder.Pedidos.Application.DTOs.PedidoStatus;
 using FoodOrder.Pedidos.Application.UseCase.Pedidos.Interface;
 using FoodOrder.Pedidos.Domain.Enums;
+using FoodOrder.Pedidos.Domain.Messaging;
 using MediatR;
 
 namespace FoodOrder.Pedidos.Application.Feature.Pedidos
@@ -15,10 +16,12 @@ namespace FoodOrder.Pedidos.Application.Feature.Pedidos
     public class UpdateStatusPagamentoCommandHandler : IRequestHandler<UpdateStatusPagamentoCommand, Unit>
     {
         private readonly IPedidoUseCase _pedidoUseCase;
+        private readonly ISqsMessageSender _sqs;
 
-        public UpdateStatusPagamentoCommandHandler(IPedidoUseCase pedidoUseCase)
+        public UpdateStatusPagamentoCommandHandler(IPedidoUseCase pedidoUseCase, ISqsMessageSender sqs)
         {
             _pedidoUseCase = pedidoUseCase;
+            _sqs = sqs;
         }
 
         public async Task<Unit> Handle(UpdateStatusPagamentoCommand request, CancellationToken cancellationToken)
@@ -29,13 +32,23 @@ namespace FoodOrder.Pedidos.Application.Feature.Pedidos
 
                 pedido.SetPagamentoStatus(request.Status);
 
-                await _pedidoUseCase.Atualizar(pedido);
+                await _pedidoUseCase.AtualizarStatusPagamento(pedido);
+
+                await EnviarPedidoParaProdução(pedido);
 
                 return Unit.Value;
             }
             catch (Exception)
             {
                 throw;
+            }
+        }
+
+        private async Task EnviarPedidoParaProdução(PedidoOutput pedido)
+        {
+            if (pedido.PagamentoStatus == PagamentoStatusEnum.PagamentoRealizado)
+            {
+                await _sqs.EnviarMensagemAsync(pedido, "producao");
             }
         }
 

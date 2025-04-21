@@ -8,23 +8,14 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
     {
         private readonly IConnectionStringProvider _connectionStringProvider;
 
-        public PedidosDbContext(DbContextOptions<PedidosDbContext> options) : base(options)
+        public PedidosDbContext(IConnectionStringProvider connectionStringProvider)
         {
+            _connectionStringProvider = connectionStringProvider;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Só configura se ainda não tiver sido configurado externamente (como nas migrations)
-            if (!optionsBuilder.IsConfigured)
-            {
-                var connectionString = _connectionStringProvider?.GetConnectionString();
-                if (string.IsNullOrEmpty(connectionString))
-                {
-                    throw new InvalidOperationException("A connection string não foi fornecida.");
-                }
-
-                optionsBuilder.UseNpgsql(connectionString);
-            }
+            optionsBuilder.UseNpgsql(_connectionStringProvider.GetConnectionString("DefaultConnection"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

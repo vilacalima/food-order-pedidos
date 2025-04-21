@@ -9,5 +9,7 @@ namespace FoodOrder.Pedidos.Application.UseCase.Pedidos.Interface
         Task<PedidoOutput> Consultar(int numeroPedido);
         Task Atualizar(PedidoOutput pedido);
         Task<PedidoDto> CriarNovoPedido(List<int> produtos, Guid ClienteId);
+        Task AtualizarStatusPagamento(PedidoOutput pedidoAtualizado);
+        Task AtualizarStatusPedido(PedidoOutput pedidoAtualizado);
     }
 }

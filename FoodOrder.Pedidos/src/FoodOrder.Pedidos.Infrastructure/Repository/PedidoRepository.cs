@@ -1,12 +1,8 @@
 ﻿using FoodOrder.Pedidos.Domain.Entities;
+using FoodOrder.Pedidos.Domain.Enums;
 using FoodOrder.Pedidos.Domain.Repository;
 using FoodOrder.Pedidos.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FoodOrder.Pedidos.Infrastructure.Repository
 {
@@ -35,9 +31,21 @@ namespace FoodOrder.Pedidos.Infrastructure.Repository
 
         public async Task Atualizar(Pedido pedido)
         {
-            var pedidoExistente = await ConsultarPedidoPorNumero(pedido.NumeroPedido) ?? throw new KeyNotFoundException($"Pedido com número {pedido.NumeroPedido} não encontrado.");
-            
             _context.Pedidos.Update(pedido);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AtualizarStatusPagamento(int id, PagamentoStatusEnum pagamento)
+        {
+            var pedido = await _context.Pedidos.FindAsync(id) ?? throw new InvalidOperationException($"Pedido with ID {id} not found.");
+            pedido.PagamentoStatus = pagamento;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AtualizarStatusPedido(int id, PedidoStatusEnum pedidoStatus)
+        {
+            var pedido = await _context.Pedidos.FindAsync(id) ?? throw new InvalidOperationException($"Pedido with ID {id} not found.");
+            pedido.PedidoStatus = pedidoStatus;
             await _context.SaveChangesAsync();
         }
     }

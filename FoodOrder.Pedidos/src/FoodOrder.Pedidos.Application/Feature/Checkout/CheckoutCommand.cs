@@ -32,10 +32,9 @@ namespace FoodOrder.Pedidos.Application.Feature.Checkout
             try
             {
                 var novoPedido = await _pedidoUseCase.CriarNovoPedido(request.Produtos, request.ClienteId);
-
                 novoPedido.SetMetodoPagamento(request.MetodoPagamento);
 
-                await _sqs.EnviarMensagemAsync(novoPedido, "checkout");
+                await EnviarPedidoParaPagamento(novoPedido);
 
                 return novoPedido;
             }
@@ -43,6 +42,11 @@ namespace FoodOrder.Pedidos.Application.Feature.Checkout
             {
                 throw;
             }
+        }
+
+        private async Task EnviarPedidoParaPagamento(PedidoDto novoPedido)
+        {
+            await _sqs.EnviarMensagemAsync(novoPedido, "checkout");
         }
     }
 }

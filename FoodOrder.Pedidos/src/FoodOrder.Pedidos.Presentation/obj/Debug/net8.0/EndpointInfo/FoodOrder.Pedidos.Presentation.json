@@ -47,10 +47,135 @@
           }
         }
       }
+    },
+    "/Pedido/AtualizarStatuspagamento": {
+      "put": {
+        "tags": [
+          "Pedido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStatusPagamentoCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStatusPagamentoCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateStatusPagamentoCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Pedido/Checkout": {
+      "post": {
+        "tags": [
+          "Pedido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "CheckoutCommand": {
+        "type": "object",
+        "properties": {
+          "clienteId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "metodoPagamento": {
+            "$ref": "#/components/schemas/MetodoPagamento"
+          },
+          "produtos": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MetodoPagamento": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PagamentoStatusEnum": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "PedidoStatusEnum": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "UpdateStatusPagamentoCommand": {
+        "type": "object",
+        "properties": {
+          "numeroPedido": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PagamentoStatusEnum"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateStatusPedidoCommand": {
         "type": "object",
         "properties": {
@@ -59,8 +184,7 @@
             "format": "int32"
           },
           "status": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/PedidoStatusEnum"
           }
         },
         "additionalProperties": false

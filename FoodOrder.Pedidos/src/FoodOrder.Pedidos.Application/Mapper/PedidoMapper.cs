@@ -34,6 +34,7 @@ namespace FoodOrder.Pedidos.Application.Mapper
             pedido.ClienteId = pedidoOutput.ClienteId ?? Guid.Empty;
             pedido.PedidoStatus = pedidoOutput.PedidoStatus;
             pedido.SacolaId = pedidoOutput.SacolaId ?? 0;
+            pedido.PagamentoStatus = pedidoOutput.PagamentoStatus;
 
             return pedido;
         }
