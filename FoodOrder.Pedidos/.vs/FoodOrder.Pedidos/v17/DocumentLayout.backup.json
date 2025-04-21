@@ -3,108 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\pedidousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\pedidousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\usecase\\pedidos\\interface\\ipedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\usecase\\pedidos\\interface\\ipedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspagamentocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspagamentocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\usecase\\pedidos\\pedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\usecase\\pedidos\\pedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E84CDD39-C475-4211-BE4A-C8863FA60D6D}|src\\FoodOrder.Pedidos.Domain\\FoodOrder.Pedidos.Domain.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.domain\\repository\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E84CDD39-C475-4211-BE4A-C8863FA60D6D}|src\\FoodOrder.Pedidos.Domain\\FoodOrder.Pedidos.Domain.csproj|solutionrelative:src\\foodorder.pedidos.domain\\repository\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\repository\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\repository\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\mapper\\pedidomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\mapper\\pedidomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\foodorder.pedidos.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\foodorder.pedidos.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\messaging\\producers\\sqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\messaging\\producers\\sqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\checkout\\checkoutcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\checkout\\checkoutcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\service\\produtohttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\service\\produtohttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\repository\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\repository\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\data\\pedidosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\data\\pedidosdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\services\\connectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\services\\connectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\configurations\\iconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\configurations\\iconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E84CDD39-C475-4211-BE4A-C8863FA60D6D}|src\\FoodOrder.Pedidos.Domain\\FoodOrder.Pedidos.Domain.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.domain\\messaging\\isqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E84CDD39-C475-4211-BE4A-C8863FA60D6D}|src\\FoodOrder.Pedidos.Domain\\FoodOrder.Pedidos.Domain.csproj|solutionrelative:src\\foodorder.pedidos.domain\\messaging\\isqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\dtos\\produto\\produtooutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\dtos\\produto\\produtooutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\mapper\\produtomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\mapper\\produtomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\interfaces\\iprodutohttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\interfaces\\iprodutohttpservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\dtos\\produto\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\dtos\\produto\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidooutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidooutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidosoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\dtos\\pedidos\\pedidosoutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{01CBB2E2-7A50-446A-90C1-5349E63E54E3}|src\\FoodOrder.Pedidos.Presentation\\FoodOrder.Pedidos.Presentation.csproj|solutionrelative:src\\foodorder.pedidos.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\usecase\\pedidos\\interface\\ipedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\usecase\\pedidos\\interface\\ipedidousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "SqsMessageSender.cs",
               "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
               "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
@@ -132,28 +52,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateStatusPedidoCommand.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwB8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:49:08.13Z",
+              "DocumentIndex": 1,
+              "Title": "FoodOrder.Pedidos.Tests",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-21T13:07:19.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPedidoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Domain\\Repository\\IPedidoRepository.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Domain\\Repository\\IPedidoRepository.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Domain\\Repository\\IPedidoRepository.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Domain\\Repository\\IPedidoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PedidoUseCaseTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\PedidoUseCaseTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\PedidoUseCaseTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\PedidoUseCaseTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\PedidoUseCaseTests.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAYwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:42:38.947Z",
+              "WhenOpened": "2025-04-21T13:09:26.104Z",
               "EditorCaption": ""
             },
             {
@@ -166,70 +86,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProdutoHttpService.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Service\\ProdutoHttpService.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Service\\ProdutoHttpService.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Service\\ProdutoHttpService.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Service\\ProdutoHttpService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:55:13.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PedidoUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\PedidoUseCase.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\PedidoUseCase.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\PedidoUseCase.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\PedidoUseCase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Title": "UpdateStatusPedidoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAD4vxMAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:22:53.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T12:49:08.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PedidosDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Data\\PedidosDbContext.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Infrastructure\\Data\\PedidosDbContext.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Data\\PedidosDbContext.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Infrastructure\\Data\\PedidosDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T02:17:12.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ConnectionStringProvider.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Services\\ConnectionStringProvider.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\Services\\ConnectionStringProvider.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Services\\ConnectionStringProvider.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\Services\\ConnectionStringProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwAUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T02:22:26.983Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PedidoRepository.cs",
               "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Repository\\PedidoRepository.cs",
               "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Infrastructure\\Repository\\PedidoRepository.cs",
               "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Repository\\PedidoRepository.cs",
               "RelativeToolTip": "src\\FoodOrder.Pedidos.Infrastructure\\Repository\\PedidoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:12:37.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T14:12:37.407Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "IPedidoUseCase.cs",
               "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\Interface\\IPedidoUseCase.cs",
               "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\Interface\\IPedidoUseCase.cs",
@@ -237,216 +118,7 @@
               "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\UseCase\\Pedidos\\Interface\\IPedidoUseCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:10:50.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateStatusPagamentoCommand.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:13:28.289Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CheckoutCommand.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Checkout\\CheckoutCommand.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Checkout\\CheckoutCommand.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Checkout\\CheckoutCommand.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Checkout\\CheckoutCommand.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAArwDAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T20:02:28.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\appsettings.Development.json",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-20T02:43:55.257Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PedidoMapper.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Mapper\\PedidoMapper.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Mapper\\PedidoMapper.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Mapper\\PedidoMapper.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Mapper\\PedidoMapper.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAMwCcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T12:35:50.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\appsettings.json",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\appsettings.json",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-20T02:37:18.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PedidoController.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Controllers\\PedidoController.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\Controllers\\PedidoController.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Controllers\\PedidoController.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\Controllers\\PedidoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T18:22:00.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IConnectionStringProvider.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Configurations\\IConnectionStringProvider.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Infrastructure\\Configurations\\IConnectionStringProvider.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Configurations\\IConnectionStringProvider.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Infrastructure\\Configurations\\IConnectionStringProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T02:23:16.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\Program.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Program.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T19:20:10.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProdutoOutput.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoOutput.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoOutput.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoOutput.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:45:08.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "PedidoDto.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoDto.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoDto.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoDto.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:58:18.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ISqsMessageSender.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Domain\\Messaging\\ISqsMessageSender.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Domain\\Messaging\\ISqsMessageSender.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Domain\\Messaging\\ISqsMessageSender.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Domain\\Messaging\\ISqsMessageSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T03:13:05.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProdutoMapper.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Mapper\\ProdutoMapper.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Mapper\\ProdutoMapper.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Mapper\\ProdutoMapper.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Mapper\\ProdutoMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:43:59.711Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ProdutoDto.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoDto.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoDto.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoDto.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\DTOs\\Produto\\ProdutoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T02:37:24.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IProdutoHttpService.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Interfaces\\IProdutoHttpService.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Interfaces\\IProdutoHttpService.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Interfaces\\IProdutoHttpService.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Interfaces\\IProdutoHttpService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:57:38.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "PedidosOutput.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidosOutput.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidosOutput.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidosOutput.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidosOutput.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:03:16.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PedidoOutput.cs",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoOutput.cs",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoOutput.cs",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoOutput.cs",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\DTOs\\Pedidos\\PedidoOutput.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T13:49:38.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Presentation\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Presentation\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\FoodOrder.Pedidos.Presentation\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-18T12:24:01.295Z"
+              "WhenOpened": "2025-04-18T14:10:50.24Z"
             }
           ]
         }
