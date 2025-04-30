@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FoodOrder.Pedidos.Infrastructure.Migrations
 {
     [DbContext(typeof(PedidosDbContext))]
-    [Migration("20250420023212_ajustdbcontext")]
-    partial class ajustdbcontext
+    [Migration("20250427042648_removetable")]
+    partial class removetable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,26 +61,6 @@ namespace FoodOrder.Pedidos.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("pedidos", (string)null);
-                });
-
-            modelBuilder.Entity("FoodOrder.Pedidos.Domain.Entities.PedidoStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PedidoStatus");
                 });
 
             modelBuilder.Entity("FoodOrder.Pedidos.Domain.Entities.Sacola", b =>

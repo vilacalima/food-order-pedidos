@@ -10,9 +10,9 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsof
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.EntityFrameworkCore.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\FoodOrder.Pedidos.Infrastructure.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\FoodOrder.Pedidos.Application.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\MediatR.Contracts.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\FoodOrder.Pedidos.Domain.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.Http.dll
@@ -23,6 +23,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsof
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll

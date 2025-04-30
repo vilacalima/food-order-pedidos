@@ -2,6 +2,6 @@ services:
   api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=9010
+      - ASPNETCORE_HTTP_PORTS=9001
     ports:
-      - "9010:80"
+      - "9001:9001"

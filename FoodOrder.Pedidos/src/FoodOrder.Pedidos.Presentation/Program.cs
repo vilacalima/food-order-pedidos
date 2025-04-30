@@ -48,6 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.ApplyMigrations();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

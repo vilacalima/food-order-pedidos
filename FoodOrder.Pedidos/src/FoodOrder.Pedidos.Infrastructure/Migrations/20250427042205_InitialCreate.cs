@@ -29,8 +29,8 @@ namespace FoodOrder.Pedidos.Infrastructure.Migrations
                     TempoEspera = table.Column<TimeSpan>(type: "interval", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ClienteId = table.Column<Guid>(type: "uuid", nullable: false),
-                    PagamentoId = table.Column<int>(type: "integer", nullable: false),
-                    PedidoStatusId = table.Column<int>(type: "integer", nullable: false),
+                    PagamentoStatus = table.Column<int>(type: "integer", nullable: false),
+                    PedidoStatus = table.Column<int>(type: "integer", nullable: false),
                     SacolaId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>

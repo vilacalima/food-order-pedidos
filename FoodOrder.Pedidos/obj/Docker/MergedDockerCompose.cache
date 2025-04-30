@@ -15,14 +15,14 @@ services:
         required: true
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "9010"
+      ASPNETCORE_HTTP_PORTS: "9001"
     image: api
     networks:
       default: null
     ports:
       - mode: ingress
-        target: 80
-        published: "9010"
+        target: 9001
+        published: "9001"
         protocol: tcp
   pedidos.postgres:
     container_name: pedidos.postgres
@@ -36,7 +36,7 @@ services:
     ports:
       - mode: ingress
         target: 5432
-        published: "5438"
+        published: "5439"
         protocol: tcp
 networks:
   default:

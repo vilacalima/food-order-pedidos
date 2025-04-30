@@ -60,26 +60,6 @@ namespace FoodOrder.Pedidos.Infrastructure.Migrations
                     b.ToTable("pedidos", (string)null);
                 });
 
-            modelBuilder.Entity("FoodOrder.Pedidos.Domain.Entities.PedidoStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PedidoStatus");
-                });
-
             modelBuilder.Entity("FoodOrder.Pedidos.Domain.Entities.Sacola", b =>
                 {
                     b.Property<int>("Id")

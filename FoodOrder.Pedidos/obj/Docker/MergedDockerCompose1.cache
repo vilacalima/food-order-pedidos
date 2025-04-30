@@ -28,7 +28,7 @@ services:
       - --wait
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "9010"
+      ASPNETCORE_HTTP_PORTS: "9001"
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
@@ -42,8 +42,8 @@ services:
       default: null
     ports:
       - mode: ingress
-        target: 80
-        published: "9010"
+        target: 9001
+        published: "9001"
         protocol: tcp
     tty: true
     volumes:
@@ -122,7 +122,7 @@ services:
     ports:
       - mode: ingress
         target: 5432
-        published: "5438"
+        published: "5439"
         protocol: tcp
 networks:
   default:

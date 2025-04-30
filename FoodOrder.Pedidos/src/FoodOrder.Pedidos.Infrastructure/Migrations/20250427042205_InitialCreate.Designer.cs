@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FoodOrder.Pedidos.Infrastructure.Migrations
 {
     [DbContext(typeof(PedidosDbContext))]
-    [Migration("20250409201034_InitialCreate")]
+    [Migration("20250427042205_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -46,10 +46,10 @@ namespace FoodOrder.Pedidos.Infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasDefaultValueSql("nextval('public.numero_pedido_seq')");
 
-                    b.Property<int>("PagamentoId")
+                    b.Property<int>("PagamentoStatus")
                         .HasColumnType("integer");
 
-                    b.Property<int>("PedidoStatusId")
+                    b.Property<int>("PedidoStatus")
                         .HasColumnType("integer");
 
                     b.Property<int>("SacolaId")
