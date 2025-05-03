@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\pedidorepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\pedidorepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\sqsmessagesendertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\sqsmessagesendertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.infrastructure\\messaging\\producers\\sqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32EFEC9-D03B-4A0D-B154-0C1923A5168B}|src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj|solutionrelative:src\\foodorder.pedidos.infrastructure\\messaging\\producers\\sqsmessagesender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspagamentocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspagamentocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\updatestatuspedidocommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\updatestatuspedidocommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\produtohttpservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\produtohttpservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFAF1A9F-8125-4735-99AC-CB55F9EF2461}|src\\FoodOrder.Pedidos.Application\\FoodOrder.Pedidos.Application.csproj|solutionrelative:src\\foodorder.pedidos.application\\feature\\pedidos\\updatestatuspedidocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\updatestatuspagamentocommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\updatestatuspagamentocommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\sacolarepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\sacolarepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\checkoutcommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\checkoutcommandhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|c:\\users\\robso\\workspace\\food-order-pedidos\\foodorder.pedidos\\foodorder.pedidos.tests\\pedidorepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E09B4AA2-24FE-47DD-B2AB-06FE75515DCA}|FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj|solutionrelative:foodorder.pedidos.tests\\pedidorepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +50,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateStatusPagamentoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
+              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
+              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPagamentoCommand.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAEwC4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:47:14.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SqsMessageSender.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
+              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
+              "RelativeToolTip": "src\\FoodOrder.Pedidos.Infrastructure\\Messaging\\Producers\\SqsMessageSender.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwCkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:44:34.924Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -31,25 +89,103 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SqsMessageSenderTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\SqsMessageSenderTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\SqsMessageSenderTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\SqsMessageSenderTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\SqsMessageSenderTests.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwCIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:44:04.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutoHttpServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\ProdutoHttpServiceTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\ProdutoHttpServiceTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\ProdutoHttpServiceTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\ProdutoHttpServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:40:07.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateStatusPedidoCommandHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\UpdateStatusPedidoCommandHandlerTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\UpdateStatusPedidoCommandHandlerTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\UpdateStatusPedidoCommandHandlerTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\UpdateStatusPedidoCommandHandlerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:36:38.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateStatusPedidoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "RelativeDocumentMoniker": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "RelativeToolTip": "src\\FoodOrder.Pedidos.Application\\Feature\\Pedidos\\UpdateStatusPedidoCommand.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:35:55.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateStatusPagamentoCommandHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\UpdateStatusPagamentoCommandHandlerTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\UpdateStatusPagamentoCommandHandlerTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\UpdateStatusPagamentoCommandHandlerTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\UpdateStatusPagamentoCommandHandlerTests.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:29:49.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CheckoutCommandHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\CheckoutCommandHandlerTests.cs",
+              "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\CheckoutCommandHandlerTests.cs",
+              "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\CheckoutCommandHandlerTests.cs",
+              "RelativeToolTip": "FoodOrder.Pedidos.Tests\\CheckoutCommandHandlerTests.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T02:24:13.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PedidoRepositoryTest.cs",
               "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\PedidoRepositoryTest.cs",
               "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\PedidoRepositoryTest.cs",
               "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\PedidoRepositoryTest.cs",
               "RelativeToolTip": "FoodOrder.Pedidos.Tests\\PedidoRepositoryTest.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwDUAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAA3wEEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T01:53:04.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "SacolaRepositoryTests.cs",
               "DocumentMoniker": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\SacolaRepositoryTests.cs",
               "RelativeDocumentMoniker": "FoodOrder.Pedidos.Tests\\SacolaRepositoryTests.cs",
               "ToolTip": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\SacolaRepositoryTests.cs",
               "RelativeToolTip": "FoodOrder.Pedidos.Tests\\SacolaRepositoryTests.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAawDMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T01:16:41.021Z",
               "EditorCaption": ""

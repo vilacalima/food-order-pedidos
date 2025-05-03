@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q6cZBysKM24=",
+  "dgSpecHash": "Wh8DJbuyNC4=",
   "success": true,
   "projectFilePath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\robso\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\polly\\8.5.2\\polly.8.5.2.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\polly.core\\8.5.2\\polly.core.8.5.2.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\richardszalay.mockhttp\\7.0.0\\richardszalay.mockhttp.7.0.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",

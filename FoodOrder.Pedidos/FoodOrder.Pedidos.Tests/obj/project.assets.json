@@ -901,6 +901,19 @@
           }
         }
       },
+      "RichardSzalay.MockHttp/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/RichardSzalay.MockHttp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/RichardSzalay.MockHttp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Diagnostics.EventLog/6.0.0": {
         "type": "package",
         "compile": {
@@ -2328,6 +2341,26 @@
         "polly.core.nuspec"
       ]
     },
+    "RichardSzalay.MockHttp/7.0.0": {
+      "sha512": "QwnauYiaywp65QKFnP+wvgiQ2D8Pv888qB2dyfd7MSVDF06sIvxqASenk+RxsWybyyt+Hu1Y251wQxpHTv3UYg==",
+      "type": "package",
+      "path": "richardszalay.mockhttp/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/RichardSzalay.MockHttp.dll",
+        "lib/net5.0/RichardSzalay.MockHttp.xml",
+        "lib/net6.0/RichardSzalay.MockHttp.dll",
+        "lib/net6.0/RichardSzalay.MockHttp.xml",
+        "lib/netstandard1.1/RichardSzalay.MockHttp.dll",
+        "lib/netstandard1.1/RichardSzalay.MockHttp.xml",
+        "lib/netstandard2.0/RichardSzalay.MockHttp.dll",
+        "lib/netstandard2.0/RichardSzalay.MockHttp.xml",
+        "richardszalay.mockhttp.7.0.0.nupkg.sha512",
+        "richardszalay.mockhttp.nuspec"
+      ]
+    },
     "System.Diagnostics.EventLog/6.0.0": {
       "sha512": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
       "type": "package",
@@ -2548,6 +2581,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.4",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "Moq >= 4.20.72",
+      "RichardSzalay.MockHttp >= 7.0.0",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
       "xunit.runner.visualstudio >= 2.8.2"
@@ -2625,6 +2659,10 @@
           "Moq": {
             "target": "Package",
             "version": "[4.20.72, )"
+          },
+          "RichardSzalay.MockHttp": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

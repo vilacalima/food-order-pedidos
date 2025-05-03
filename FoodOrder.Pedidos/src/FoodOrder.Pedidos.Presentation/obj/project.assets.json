@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "AWSSDK.Core/3.7.402.38": {
+      "AWSSDK.Core/4.0.0.2": {
         "type": "package",
         "compile": {
           "lib/net8.0/AWSSDK.Core.dll": {
@@ -34,10 +34,10 @@
           }
         }
       },
-      "AWSSDK.SQS/3.7.400.132": {
+      "AWSSDK.SQS/4.0.0.1": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.38, 4.0.0)"
+          "AWSSDK.Core": "[4.0.0.2, 5.0.0)"
         },
         "compile": {
           "lib/net8.0/AWSSDK.SQS.dll": {
@@ -47,6 +47,22 @@
         "runtime": {
           "lib/net8.0/AWSSDK.SQS.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Castle.Core/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -974,6 +990,18 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "Moq/4.20.72": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "compile": {
+          "lib/net6.0/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {}
+        }
+      },
       "Npgsql/9.0.3": {
         "type": "package",
         "dependencies": {
@@ -1258,6 +1286,32 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.IO.Pipelines/9.0.4": {
         "type": "package",
         "compile": {
@@ -1417,23 +1471,20 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.402.38": {
-      "sha512": "DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
+    "AWSSDK.Core/4.0.0.2": {
+      "sha512": "vXDAkmIB8xMmtnWubDq/uZhpfTXKAHicnTQTJBjkjNvom7eaHf5r0OB3Be+cXzzcQl4O1UOOAYHyN436JSCUlA==",
       "type": "package",
-      "path": "awssdk.core/3.7.402.38",
+      "path": "awssdk.core/4.0.0.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.402.38.nupkg.sha512",
+        "awssdk.core.4.0.0.2.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
-        "lib/net35/AWSSDK.Core.dll",
-        "lib/net35/AWSSDK.Core.pdb",
-        "lib/net35/AWSSDK.Core.xml",
-        "lib/net45/AWSSDK.Core.dll",
-        "lib/net45/AWSSDK.Core.pdb",
-        "lib/net45/AWSSDK.Core.xml",
+        "lib/net472/AWSSDK.Core.dll",
+        "lib/net472/AWSSDK.Core.pdb",
+        "lib/net472/AWSSDK.Core.xml",
         "lib/net8.0/AWSSDK.Core.dll",
         "lib/net8.0/AWSSDK.Core.pdb",
         "lib/net8.0/AWSSDK.Core.xml",
@@ -1464,25 +1515,22 @@
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
       ]
     },
-    "AWSSDK.SQS/3.7.400.132": {
-      "sha512": "BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
+    "AWSSDK.SQS/4.0.0.1": {
+      "sha512": "6yIfBuUAhbPI2DD6JEaYxN3du3x7XUZutdgsT5yIl8NmZswGWkzjpF/laWJ1Uk+OAmHv6XhMbSsEuiisOWaUGg==",
       "type": "package",
-      "path": "awssdk.sqs/3.7.400.132",
+      "path": "awssdk.sqs/4.0.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SQS.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.sqs.3.7.400.132.nupkg.sha512",
+        "awssdk.sqs.4.0.0.1.nupkg.sha512",
         "awssdk.sqs.nuspec",
         "images/AWSLogo.png",
-        "lib/net35/AWSSDK.SQS.dll",
-        "lib/net35/AWSSDK.SQS.pdb",
-        "lib/net35/AWSSDK.SQS.xml",
-        "lib/net45/AWSSDK.SQS.dll",
-        "lib/net45/AWSSDK.SQS.pdb",
-        "lib/net45/AWSSDK.SQS.xml",
+        "lib/net472/AWSSDK.SQS.dll",
+        "lib/net472/AWSSDK.SQS.pdb",
+        "lib/net472/AWSSDK.SQS.xml",
         "lib/net8.0/AWSSDK.SQS.dll",
         "lib/net8.0/AWSSDK.SQS.pdb",
         "lib/net8.0/AWSSDK.SQS.xml",
@@ -1494,6 +1542,30 @@
         "lib/netstandard2.0/AWSSDK.SQS.xml",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Castle.Core/5.1.1": {
+      "sha512": "rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "type": "package",
+      "path": "castle.core/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle-logo.png",
+        "castle.core.5.1.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net462/Castle.Core.dll",
+        "lib/net462/Castle.Core.xml",
+        "lib/net6.0/Castle.Core.dll",
+        "lib/net6.0/Castle.Core.xml",
+        "lib/netstandard2.0/Castle.Core.dll",
+        "lib/netstandard2.0/Castle.Core.xml",
+        "lib/netstandard2.1/Castle.Core.dll",
+        "lib/netstandard2.1/Castle.Core.xml",
+        "readme.txt"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3556,6 +3628,23 @@
         "readme.md"
       ]
     },
+    "Moq/4.20.72": {
+      "sha512": "EA55cjyNn8eTNWrgrdZJH5QLFp2L43oxl1tlkoYUKIE9pRwL784OWiTXeCV5ApS+AMYEAlt7Fo03A2XfouvHmQ==",
+      "type": "package",
+      "path": "moq/4.20.72",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/Moq.dll",
+        "lib/net6.0/Moq.dll",
+        "lib/netstandard2.0/Moq.dll",
+        "lib/netstandard2.1/Moq.dll",
+        "moq.4.20.72.nupkg.sha512",
+        "moq.nuspec",
+        "readme.md"
+      ]
+    },
     "Npgsql/9.0.3": {
       "sha512": "tPvY61CxOAWxNsKLEBg+oR646X4Bc8UmyQ/tJszL/7mEmIXQnnBhVJZrZEEUv0Bstu0mEsHZD5At3EO8zQRAYw==",
       "type": "package",
@@ -3957,6 +4046,37 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "sha512": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.EventLog.dll",
+        "lib/net461/System.Diagnostics.EventLog.xml",
+        "lib/net6.0/System.Diagnostics.EventLog.dll",
+        "lib/net6.0/System.Diagnostics.EventLog.xml",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.IO.Pipelines/9.0.4": {
       "sha512": "luF2Xba+lTe2GOoNQdZLe8q7K6s7nSpWZl9jIwWNMszN4/Yv0lmxk9HISgMmwdyZ83i3UhAGXaSY9o6IJBUuuA==",
       "type": "package",
@@ -4189,7 +4309,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AWSSDK.Extensions.NETCore.Setup >= 3.7.400",
-      "AWSSDK.SQS >= 3.7.400.132",
+      "AWSSDK.SQS >= 4.0.0.1",
       "FoodOrder.Pedidos.Application >= 1.0.0",
       "MediatR >= 12.5.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
@@ -4197,6 +4317,7 @@
       "Microsoft.Extensions.Configuration.Binder >= 9.0.4",
       "Microsoft.Extensions.Http >= 9.0.4",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
+      "Moq >= 4.20.72",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4260,7 +4381,7 @@
           },
           "AWSSDK.SQS": {
             "target": "Package",
-            "version": "[3.7.400.132, )"
+            "version": "[4.0.0.1, )"
           },
           "MediatR": {
             "target": "Package",
@@ -4287,6 +4408,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.21.0, )"
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "[4.20.72, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
