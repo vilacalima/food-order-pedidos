@@ -1,0 +1,7 @@
+services:
+  api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=9001
+    ports:
+      - "9001:9001"

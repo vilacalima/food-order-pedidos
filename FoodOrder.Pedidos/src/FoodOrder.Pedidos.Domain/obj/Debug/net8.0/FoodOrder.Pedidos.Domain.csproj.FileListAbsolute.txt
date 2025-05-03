@@ -1,0 +1,12 @@
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\bin\Debug\net8.0\FoodOrder.Pedidos.Domain.deps.json
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\bin\Debug\net8.0\FoodOrder.Pedidos.Domain.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\bin\Debug\net8.0\FoodOrder.Pedidos.Domain.pdb
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.AssemblyInfoInputs.cache
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.AssemblyInfo.cs
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.sourcelink.json
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\refint\FoodOrder.Pedidos.Domain.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\FoodOrder.Pedidos.Domain.pdb
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Domain\obj\Debug\net8.0\ref\FoodOrder.Pedidos.Domain.dll

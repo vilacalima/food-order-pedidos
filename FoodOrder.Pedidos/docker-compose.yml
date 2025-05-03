@@ -1,0 +1,25 @@
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    container_name: pedidos.api
+    build:
+      context: .
+      dockerfile: src/FoodOrder.Pedidos.Presentation/Dockerfile
+    ports:
+      - "9001:9001" # Porta externa 9010 mapeando porta interna 80
+    depends_on:
+      - pedidos.postgres
+    command: >
+      sh -c "until pg_isready -h postgres -p 5432 -U postgres; do echo 'Aguardando PostgreSQL...'; sleep 2; done &&
+      dotnet ef database update --project FoodOrder.Pedidos/src/FoodOrder.Pedidos.Infrastructure/FoodOrder.Pedidos.Infrastructure.csproj --startup-project FoodOrder.Pedidos/src/FoodOrder.Pedidos.Presentation/FoodOrder.Pedidos.Presentation.csproj &&
+      dotnet FoodOrder.Pedidos.Presentation.dll"
+   
+  pedidos.postgres:
+    image: postgres:latest
+    container_name: pedidos.postgres
+    ports:
+      - "5439:5432"
+    environment:
+      - POSTGRES_DB=foodorder_pedidos_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
