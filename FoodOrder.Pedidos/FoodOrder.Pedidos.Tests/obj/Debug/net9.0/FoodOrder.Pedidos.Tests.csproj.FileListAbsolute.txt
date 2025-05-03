@@ -140,3 +140,4 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\FoodOrder.Pedidos.Tests.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\FoodOrder.Pedidos.Tests.genruntimeconfig.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\ref\FoodOrder.Pedidos.Tests.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
