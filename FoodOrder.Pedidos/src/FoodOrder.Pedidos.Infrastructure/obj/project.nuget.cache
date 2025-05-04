@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+WuPQa21z70=",
+  "dgSpecHash": "CZ34cOs6mxU=",
   "success": true,
   "projectFilePath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\src\\FoodOrder.Pedidos.Infrastructure\\FoodOrder.Pedidos.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\3.7.402.38\\awssdk.core.3.7.402.38.nupkg.sha512",
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.400\\awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512",
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\3.7.400.132\\awssdk.sqs.3.7.400.132.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\4.0.0\\awssdk.core.4.0.0.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.0\\awssdk.extensions.netcore.setup.4.0.0.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\4.0.0\\awssdk.sqs.4.0.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.4\\microsoft.entityframeworkcore.9.0.4.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.4\\microsoft.entityframeworkcore.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.4\\microsoft.entityframeworkcore.analyzers.9.0.4.nupkg.sha512",

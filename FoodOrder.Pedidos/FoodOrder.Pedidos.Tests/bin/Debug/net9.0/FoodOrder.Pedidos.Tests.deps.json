@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "FoodOrder.Pedidos.Tests/1.0.0": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": "4.0.0",
+          "AWSSDK.SQS": "4.0.0",
           "FluentAssertions": "8.2.0",
           "FoodOrder.Pedidos.Application": "1.0.0",
           "FoodOrder.Pedidos.Domain": "1.0.0",
@@ -23,36 +25,36 @@
           "FoodOrder.Pedidos.Tests.dll": {}
         }
       },
-      "AWSSDK.Core/3.7.402.38": {
+      "AWSSDK.Core/4.0.0": {
         "runtime": {
           "lib/net8.0/AWSSDK.Core.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.402.38"
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
-      "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
+      "AWSSDK.Extensions.NETCore.Setup/4.0.0": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.402.38",
+          "AWSSDK.Core": "4.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.4",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.4"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.400.0"
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
-      "AWSSDK.SQS/3.7.400.132": {
+      "AWSSDK.SQS/4.0.0": {
         "dependencies": {
-          "AWSSDK.Core": "3.7.402.38"
+          "AWSSDK.Core": "4.0.0"
         },
         "runtime": {
           "lib/net8.0/AWSSDK.SQS.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.7.400.132"
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
           }
         }
       },
@@ -759,6 +761,8 @@
       "xunit.runner.visualstudio/2.8.2": {},
       "FoodOrder.Pedidos.Application/1.0.0": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": "4.0.0",
+          "AWSSDK.SQS": "4.0.0",
           "FoodOrder.Pedidos.Domain": "1.0.0",
           "FoodOrder.Pedidos.Infrastructure": "1.0.0",
           "MediatR": "12.5.0",
@@ -782,8 +786,8 @@
       },
       "FoodOrder.Pedidos.Infrastructure/1.0.0": {
         "dependencies": {
-          "AWSSDK.Extensions.NETCore.Setup": "3.7.400",
-          "AWSSDK.SQS": "3.7.400.132",
+          "AWSSDK.Extensions.NETCore.Setup": "4.0.0",
+          "AWSSDK.SQS": "4.0.0",
           "FoodOrder.Pedidos.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.4",
           "Microsoft.Extensions.Configuration.Binder": "9.0.4",
@@ -806,26 +810,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AWSSDK.Core/3.7.402.38": {
+    "AWSSDK.Core/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
-      "path": "awssdk.core/3.7.402.38",
-      "hashPath": "awssdk.core.3.7.402.38.nupkg.sha512"
+      "sha512": "sha512-fUQeMoO358Gy/XhG7jphvY+ga4gUUonR7qc9rBAU0lXFJmSsaHVXFkhLi7+YxrhqIF/H4lWzr3SQ6rVHhSDM3w==",
+      "path": "awssdk.core/4.0.0",
+      "hashPath": "awssdk.core.4.0.0.nupkg.sha512"
     },
-    "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
+    "AWSSDK.Extensions.NETCore.Setup/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-i4ta6n+QuGKt1RBCIbRU2wohz5DYJ+wRPR9EI7YkzC8eaWSbmMXTNL+s4HpYUsoxM7uyUrYoW0gC52/9KnK7xw==",
-      "path": "awssdk.extensions.netcore.setup/3.7.400",
-      "hashPath": "awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512"
+      "sha512": "sha512-VJP+y186CTC8NSadjzLGIjJ2TNUOps9QR9QyWMkPHdmLX8HlMiS8Bp8mESJ+MnZupvZ5z5KB9sF42lSEHo9lgQ==",
+      "path": "awssdk.extensions.netcore.setup/4.0.0",
+      "hashPath": "awssdk.extensions.netcore.setup.4.0.0.nupkg.sha512"
     },
-    "AWSSDK.SQS/3.7.400.132": {
+    "AWSSDK.SQS/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
-      "path": "awssdk.sqs/3.7.400.132",
-      "hashPath": "awssdk.sqs.3.7.400.132.nupkg.sha512"
+      "sha512": "sha512-lTtR3M0SWe20408X9VtplsqZuc+0fjyROPJdcHFpcFWjRzg8y2MpZfsUxFe5PXwLfpw/cU+57NkuMAjJOYsAng==",
+      "path": "awssdk.sqs/4.0.0",
+      "hashPath": "awssdk.sqs.4.0.0.nupkg.sha512"
     },
     "Castle.Core/5.1.1": {
       "type": "package",

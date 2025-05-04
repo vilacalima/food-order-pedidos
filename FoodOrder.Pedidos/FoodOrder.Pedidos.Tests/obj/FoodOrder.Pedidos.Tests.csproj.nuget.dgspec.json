@@ -57,6 +57,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "FluentAssertions": {
               "target": "Package",
               "version": "[8.2.0, )"
@@ -165,6 +173,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.5.0, )"
@@ -315,11 +331,11 @@
           "dependencies": {
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[3.7.400, )"
+              "version": "[4.0.0, )"
             },
             "AWSSDK.SQS": {
               "target": "Package",
-              "version": "[3.7.400.132, )"
+              "version": "[4.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",

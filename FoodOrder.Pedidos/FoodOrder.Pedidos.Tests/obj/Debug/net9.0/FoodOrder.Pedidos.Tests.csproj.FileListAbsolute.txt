@@ -19,6 +19,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
@@ -50,6 +51,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Polly.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Polly.Core.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\RichardSzalay.MockHttp.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\xunit.abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\xunit.assert.dll
@@ -140,5 +142,3 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\FoodOrder.Pedidos.Tests.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\FoodOrder.Pedidos.Tests.genruntimeconfig.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\obj\Debug\net9.0\ref\FoodOrder.Pedidos.Tests.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\FoodOrder.Pedidos.Tests\bin\Debug\net9.0\RichardSzalay.MockHttp.dll

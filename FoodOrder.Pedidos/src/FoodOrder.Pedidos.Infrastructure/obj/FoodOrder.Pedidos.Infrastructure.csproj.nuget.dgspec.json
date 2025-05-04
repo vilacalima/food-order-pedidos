@@ -121,11 +121,11 @@
           "dependencies": {
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[3.7.400, )"
+              "version": "[4.0.0, )"
             },
             "AWSSDK.SQS": {
               "target": "Package",
-              "version": "[3.7.400.132, )"
+              "version": "[4.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
