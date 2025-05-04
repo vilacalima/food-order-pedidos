@@ -158,3 +158,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.genruntimeconfig.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\ref\FoodOrder.Pedidos.Presentation.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Moq.dll

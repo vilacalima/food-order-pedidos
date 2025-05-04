@@ -48,3 +48,4 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\FoodOrde
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\obj\Debug\docker-c.35A3FFBA.Up2Date
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\bin\Debug\Microsoft.EntityFrameworkCore.InMemory.dll

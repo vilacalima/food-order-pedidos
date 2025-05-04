@@ -7,15 +7,20 @@ namespace FoodOrder.Pedidos.Infrastructure.Data
     public class PedidosDbContext : DbContext
     {
         private readonly IConnectionStringProvider _connectionStringProvider;
+        private readonly bool _isTesting;
 
-        public PedidosDbContext(IConnectionStringProvider connectionStringProvider)
+        public PedidosDbContext(IConnectionStringProvider connectionStringProvider, bool isTesting = false)
         {
             _connectionStringProvider = connectionStringProvider;
+            _isTesting = isTesting;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_connectionStringProvider.GetConnectionString("DefaultConnection"));
+            if (_isTesting)
+                optionsBuilder.UseInMemoryDatabase("PedidosDb");
+            else
+                optionsBuilder.UseNpgsql(_connectionStringProvider.GetConnectionString("DefaultConnection"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
