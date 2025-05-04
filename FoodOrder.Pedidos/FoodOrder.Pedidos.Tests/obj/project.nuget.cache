@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Wh8DJbuyNC4=",
+  "dgSpecHash": "lKyay63VG/c=",
   "success": true,
   "projectFilePath": "C:\\Users\\robso\\workspace\\food-order-pedidos\\FoodOrder.Pedidos\\FoodOrder.Pedidos.Tests\\FoodOrder.Pedidos.Tests.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\3.7.402.38\\awssdk.core.3.7.402.38.nupkg.sha512",
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.400\\awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512",
-    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\3.7.400.132\\awssdk.sqs.3.7.400.132.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.core\\4.0.0\\awssdk.core.4.0.0.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.extensions.netcore.setup\\4.0.0\\awssdk.extensions.netcore.setup.4.0.0.nupkg.sha512",
+    "C:\\Users\\robso\\.nuget\\packages\\awssdk.sqs\\4.0.0\\awssdk.sqs.4.0.0.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\robso\\.nuget\\packages\\fluentassertions\\8.2.0\\fluentassertions.8.2.0.nupkg.sha512",

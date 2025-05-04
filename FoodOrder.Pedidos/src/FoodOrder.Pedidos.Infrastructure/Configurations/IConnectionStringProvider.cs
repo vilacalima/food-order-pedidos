@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace FoodOrder.Pedidos.Infrastructure.Configurations;
 
-namespace FoodOrder.Pedidos.Infrastructure.Configurations
+public interface IConnectionStringProvider
 {
-    public interface IConnectionStringProvider
-    {
-        string GetConnectionString(string name);
-    }
+    string GetConnectionString(string name);
 }

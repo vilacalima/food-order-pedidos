@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "AWSSDK.Core/3.7.402.38": {
+      "AWSSDK.Core/4.0.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/AWSSDK.Core.dll": {
@@ -15,29 +15,32 @@
           }
         }
       },
-      "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
+      "AWSSDK.Extensions.NETCore.Setup/4.0.0": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "3.7.402",
+          "AWSSDK.Core": "4.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
         },
         "compile": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "related": ".pdb"
+            "related": ".pdb;.xml"
           }
         },
         "runtime": {
           "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
-            "related": ".pdb"
+            "related": ".pdb;.xml"
           }
+        },
+        "build": {
+          "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets": {}
         }
       },
-      "AWSSDK.SQS/3.7.400.132": {
+      "AWSSDK.SQS/4.0.0": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.38, 4.0.0)"
+          "AWSSDK.Core": "[4.0.0, 5.0.0)"
         },
         "compile": {
           "lib/net8.0/AWSSDK.SQS.dll": {
@@ -472,23 +475,20 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/3.7.402.38": {
-      "sha512": "DvbvpxvLNZBhUgRNINquA2ecegiPb3EVWG9bQBYy2cgCab2RGYP0oJD7ZKqagKbdIPEGe0WrswLxAlLBYuhz1A==",
+    "AWSSDK.Core/4.0.0": {
+      "sha512": "fUQeMoO358Gy/XhG7jphvY+ga4gUUonR7qc9rBAU0lXFJmSsaHVXFkhLi7+YxrhqIF/H4lWzr3SQ6rVHhSDM3w==",
       "type": "package",
-      "path": "awssdk.core/3.7.402.38",
+      "path": "awssdk.core/4.0.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.3.7.402.38.nupkg.sha512",
+        "awssdk.core.4.0.0.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
-        "lib/net35/AWSSDK.Core.dll",
-        "lib/net35/AWSSDK.Core.pdb",
-        "lib/net35/AWSSDK.Core.xml",
-        "lib/net45/AWSSDK.Core.dll",
-        "lib/net45/AWSSDK.Core.pdb",
-        "lib/net45/AWSSDK.Core.xml",
+        "lib/net472/AWSSDK.Core.dll",
+        "lib/net472/AWSSDK.Core.pdb",
+        "lib/net472/AWSSDK.Core.xml",
         "lib/net8.0/AWSSDK.Core.dll",
         "lib/net8.0/AWSSDK.Core.pdb",
         "lib/net8.0/AWSSDK.Core.xml",
@@ -501,43 +501,47 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.Extensions.NETCore.Setup/3.7.400": {
-      "sha512": "i4ta6n+QuGKt1RBCIbRU2wohz5DYJ+wRPR9EI7YkzC8eaWSbmMXTNL+s4HpYUsoxM7uyUrYoW0gC52/9KnK7xw==",
+    "AWSSDK.Extensions.NETCore.Setup/4.0.0": {
+      "sha512": "VJP+y186CTC8NSadjzLGIjJ2TNUOps9QR9QyWMkPHdmLX8HlMiS8Bp8mESJ+MnZupvZ5z5KB9sF42lSEHo9lgQ==",
       "type": "package",
-      "path": "awssdk.extensions.netcore.setup/3.7.400",
+      "path": "awssdk.extensions.netcore.setup/4.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.extensions.netcore.setup.3.7.400.nupkg.sha512",
+        "ConfigurationSchema.json",
+        "awssdk.extensions.netcore.setup.4.0.0.nupkg.sha512",
         "awssdk.extensions.netcore.setup.nuspec",
+        "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets",
+        "buildTransitive/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.targets",
+        "buildTransitive/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.targets",
         "images/AWSLogo.png",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
-        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.xml"
       ]
     },
-    "AWSSDK.SQS/3.7.400.132": {
-      "sha512": "BTH5SpVkwvtAU8OuVyj3BJvJ4RvRZ0ZlSPqnGeGJ2YM1jJXfYn1vmCtrzB6sLDsnX0bRM4iARnYLI1eyM9IKyw==",
+    "AWSSDK.SQS/4.0.0": {
+      "sha512": "lTtR3M0SWe20408X9VtplsqZuc+0fjyROPJdcHFpcFWjRzg8y2MpZfsUxFe5PXwLfpw/cU+57NkuMAjJOYsAng==",
       "type": "package",
-      "path": "awssdk.sqs/3.7.400.132",
+      "path": "awssdk.sqs/4.0.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SQS.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.sqs.3.7.400.132.nupkg.sha512",
+        "awssdk.sqs.4.0.0.nupkg.sha512",
         "awssdk.sqs.nuspec",
         "images/AWSLogo.png",
-        "lib/net35/AWSSDK.SQS.dll",
-        "lib/net35/AWSSDK.SQS.pdb",
-        "lib/net35/AWSSDK.SQS.xml",
-        "lib/net45/AWSSDK.SQS.dll",
-        "lib/net45/AWSSDK.SQS.pdb",
-        "lib/net45/AWSSDK.SQS.xml",
+        "lib/net472/AWSSDK.SQS.dll",
+        "lib/net472/AWSSDK.SQS.pdb",
+        "lib/net472/AWSSDK.SQS.xml",
         "lib/net8.0/AWSSDK.SQS.dll",
         "lib/net8.0/AWSSDK.SQS.pdb",
         "lib/net8.0/AWSSDK.SQS.xml",
@@ -1188,8 +1192,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "AWSSDK.Extensions.NETCore.Setup >= 3.7.400",
-      "AWSSDK.SQS >= 3.7.400.132",
+      "AWSSDK.Extensions.NETCore.Setup >= 4.0.0",
+      "AWSSDK.SQS >= 4.0.0",
       "FoodOrder.Pedidos.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.4",
       "Microsoft.Extensions.Configuration.Binder >= 9.0.4",
@@ -1254,11 +1258,11 @@
         "dependencies": {
           "AWSSDK.Extensions.NETCore.Setup": {
             "target": "Package",
-            "version": "[3.7.400, )"
+            "version": "[4.0.0, )"
           },
           "AWSSDK.SQS": {
             "target": "Package",
-            "version": "[3.7.400.132, )"
+            "version": "[4.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",

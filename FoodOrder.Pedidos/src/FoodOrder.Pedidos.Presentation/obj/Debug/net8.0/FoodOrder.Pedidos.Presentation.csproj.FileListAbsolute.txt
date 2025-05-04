@@ -9,6 +9,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\AWSSDK.Core.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\AWSSDK.Extensions.NETCore.Setup.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\AWSSDK.SQS.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Humanizer.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\MediatR.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\MediatR.Contracts.dll
@@ -24,6 +25,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
@@ -45,6 +47,7 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Moq.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Npgsql.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Polly.dll
@@ -152,13 +155,10 @@ C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedi
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FoodOrder.Pedidos.Presentation.props
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FoodOrder.Pedidos.Presentation.props
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrde.B59E2B84.Up2Date
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\refint\FoodOrder.Pedidos.Presentation.dll
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.pdb
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\FoodOrder.Pedidos.Presentation.genruntimeconfig.cache
 C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\ref\FoodOrder.Pedidos.Presentation.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Castle.Core.dll
-C:\Users\robso\workspace\food-order-pedidos\FoodOrder.Pedidos\src\FoodOrder.Pedidos.Presentation\bin\Debug\net8.0\Moq.dll
