@@ -16,9 +16,6 @@ jobs:
       - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
-      - name: 🛠️ Build da imagem Docker (tag temporária)
-        run: docker build -f src/FoodOrder.Pedidos.Presentation/Dockerfile -t vilacaro/pedido:test-ci .
-
       - name: 🧪 Restaurar dependências
         run: dotnet restore
 
