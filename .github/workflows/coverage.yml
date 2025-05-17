@@ -97,22 +97,29 @@ jobs:
             echo "Arquivo de cobertura NÃO encontrado: ${{ env.coverage_path }}"
             exit 1
           fi
+      
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+      
+      - name: Convert Cobertura to OpenCover
+        run: |
+          export PATH="$HOME/.dotnet/tools:$PATH"
+          reportgenerator \
+            -reports:**/coverage.cobertura.xml \
+            -targetdir:coveragereport \
+            -reporttypes:OpenCover
 
       - name: 🚀 Run Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          COVERAGE_PATH: ./FoodOrder.Pedidos/FoodOrder.Pedidos.Tests/TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml
         run: |
           export PATH="$HOME/.dotnet/tools:$PATH"
-          echo "Arquivo de cobertura: $COVERAGE_PATH"
+          echo "Enviando arquivo ./coveragereport/OpenCover.xml para Coveralls"
           csmacnz.Coveralls \
-            --verbose \
-            --useRelativePaths \
             --opencover \
-            -i "$COVERAGE_PATH" \
+            -i ./coveragereport/OpenCover.xml \
             --repoToken $COVERALLS_REPO_TOKEN \
             --commitId ${{ github.sha }} \
             --commitBranch ${{ github.ref_name }} \
             --serviceName github \
             --jobId ${{ github.run_id }}
-
