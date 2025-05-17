@@ -13,6 +13,11 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
+      - name: Setup .NET 9.0 SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
       - name: Login no Docker Hub
         uses: docker/login-action@v3
         with:
@@ -20,7 +25,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build da imagem Docker (com Dockerfile customizado)
-        run: docker build -f src/FoodOrder.Pedidos.Presentation/Dockerfile -t vilacaro/pedido:latest .
+        run: docker build -f FoodOrder.Pedidos/Dockerfile -t vilacaro/pedido:latest .
 
       - name: Push da imagem para o Docker Hub
         run: docker push vilacaro/pedido:latest
