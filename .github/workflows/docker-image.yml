@@ -29,8 +29,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build da imagem Docker (com Dockerfile customizado)
-        run: docker build -f FoodOrder.Pedidos/src/FoodOrder.Pedidos.Presentation/Dockerfile -t vilacaro/pedido:latest FoodOrder.Pedidos/src/FoodOrder.Pedidos.Presentation
-
+      - name: Build da imagem Docker
+        run: docker build -f src/FoodOrder.Pedidos.Presentation/Dockerfile -t vilacaro/pedido:latest .
+        
       - name: Push da imagem para o Docker Hub
         run: docker push vilacaro/pedido:latest
