@@ -90,10 +90,11 @@ jobs:
           echo "$HOME/dotnet3.1" >> $GITHUB_PATH
           export PATH="$HOME/dotnet3.1:$PATH"
 
-      - name: 🔧 Install libssl1.1 dependency for .NET Core 3.1
+      - name: 🔧 Install libssl1.1 (for .NET Core 3.1 compatibility)
         run: |
-          wget http://snapshot.debian.org/archive/debian/20220910T153926Z/pool/main/o/openssl1.1/libssl1.1_1.1.1n-0+deb11u4_amd64.deb
-          sudo dpkg -i libssl1.1_1.1.1n-0+deb11u4_amd64.deb
+          wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb || \
+          wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+          sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb || echo "libssl1.1 already installed or not needed"
 
       - name: 🧰 Install coveralls.net tool
         run: |
