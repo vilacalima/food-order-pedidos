@@ -28,8 +28,11 @@ jobs:
 
       - name: 🔧 Install .NET Core 3.1 (for Coveralls)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-3.1
+          wget https://dot.net/v1/dotnet-install.sh
+          chmod +x dotnet-install.sh
+          ./dotnet-install.sh --version 3.1.426 --install-dir "$HOME/dotnet3.1"
+          echo "$HOME/dotnet3.1" >> $GITHUB_PATH
+          export PATH="$HOME/dotnet3.1:$PATH"
 
       - name: 📦 Restore dependencies
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
