@@ -29,3 +29,42 @@ jobs:
 
       - name: 🧪 Rodar testes
         run: dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-build --verbosity normal
+      - name: 🧪 Rodar testes com cobertura
+        run: dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-build --collect:"XPlat Code Coverage" --results-directory TestResults --verbosity normal
+
+      - name: 📊 Instalar ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: 📊 Gerar HTML do Coverage
+        run: |
+          reportgenerator \
+            -reports:"TestResults/**/coverage.cobertura.xml" \
+            -targetdir:"coverage-report" \
+            -reporttypes:HtmlInline_AzurePipelines;Cobertura \
+            -classfilters:"-*.Migrations.*"
+
+      - name: 📈 Extrair porcentagem da cobertura
+        id: coverage
+        run: |
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" coverage-report/Cobertura.xml)
+          coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
+          echo "coverage_percent=${coverage_percent}" >> $GITHUB_ENV
+          echo "coverage=${coverage_percent}" >> $GITHUB_OUTPUT
+
+      - name: ✏️ Atualizar badge no README
+        run: |
+          sed -i 's|!\[Cobertura\](https://img.shields.io/badge/Cobertura-.*%25-brightgreen)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g' README.md
+
+      - name: 💾 Commit do README atualizado
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add README.md
+          git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%" || echo "Nenhuma mudança no README"
+          git push
+
+      - name: 📁 Publicar HTML do relatório
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-html
+          path: coverage-report
