@@ -25,13 +25,19 @@ jobs:
       - name: 🧱 Build do projeto
         run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
 
+      - name: 📂 Create coverage output directory
+        run: mkdir -p ./Tests/Coverage
+
       - name: 🧪 Run tests and collect coverage (OpenCover format)
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --no-build \
             /p:CollectCoverage=true \
-            /p:CoverletOutputFormat=opencover \
-            /p:CoverletOutput=./Tests/Coverage/coverage.opencover.xml
+            /p:CoverletOutput=./Tests/Coverage/coverage.opencover.xml \
+            /p:CoverletOutputFormat=opencover
+
+      - name: 📂 List coverage directory
+        run: ls -la ./Tests/Coverage
 
       - name: 📊 Install ReportGenerator tool
         run: |
@@ -52,7 +58,7 @@ jobs:
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
-          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" "./Tests/Coverage/coverage.opencover.xml")
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ./Tests/Coverage/coverage.opencover.xml)
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
           echo "Coverage percent: $coverage_percent%"
           echo "coverage=$coverage_percent" >> $GITHUB_OUTPUT
@@ -72,15 +78,6 @@ jobs:
             git push
           else
             echo "No changes in README.md"
-          fi
-
-      - name: 📂 Check OpenCover coverage file exists
-        run: |
-          if [ -f "./Tests/Coverage/coverage.opencover.xml" ]; then
-            echo "Arquivo OpenCover encontrado: ./Tests/Coverage/coverage.opencover.xml"
-          else
-            echo "Arquivo OpenCover NÃO encontrado!"
-            exit 1
           fi
 
       - name: 🚀 Upload coverage to Coveralls via npx
