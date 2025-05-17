@@ -49,18 +49,19 @@ jobs:
       - name: 📊 Generate HTML coverage report
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
+          export PATH="$HOME/.dotnet/tools:$PATH"
           reportgenerator \
-            -reports:"$coverage_path" \
+            -reports:"${{ env.coverage_path }}" \
             -targetdir:"./Tests/Coverage/Report" \
             -reporttypes:Html
-            
+
       - name: 🛠️ Install xmllint
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
       
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
-          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ${{ env.coverage_path }})
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" "${{ env.coverage_path }}")
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
           echo "Coverage percent: $coverage_percent%"
           echo "coverage=$coverage_percent" >> $GITHUB_OUTPUT
@@ -112,10 +113,3 @@ jobs:
           export PATH="$HOME/.dotnet/tools:$PATH"
           csmacnz.Coveralls \
             --useRelativePaths \
-            --opencover \
-            -i ${{ env.coverage_path }} \
-            --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
-            --commitId ${{ github.sha }} \
-            --commitBranch ${{ github.ref_name }} \
-            --serviceName github \
-            --jobId ${{ github.run_id }}
