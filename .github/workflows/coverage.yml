@@ -1,4 +1,4 @@
-name: Report Coverage
+name: Test and Report Coverage
 
 on:
   push:
@@ -37,24 +37,27 @@ jobs:
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --no-build \
-            --collect:"XPlat Code Coverage" \
-            --results-directory ./Tests/Coverage/XML \
-            -p:CollectCoverage=true \
-            -p:CoverletOutputFormat=cobertura \
-            -p:CoverletOutput=./Tests/Coverage/XML/coverage.cobertura.xml
+            --collect:"XPlat Code Coverage"
+
+      - name: 🔍 Find cobertura file
+        id: find_coverage
+        run: |
+          COVERAGE_FILE=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
+          echo "Arquivo encontrado: $COVERAGE_FILE"
+          echo "coverage_path=$COVERAGE_FILE" >> $GITHUB_ENV
 
       - name: 📊 Generate HTML coverage report
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
           reportgenerator \
-            -reports:"./Tests/Coverage/XML/coverage.cobertura.xml" \
+            -reports:"$coverage_path" \
             -targetdir:"./Tests/Coverage/Report" \
             -reporttypes:Html
 
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
-          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ./Tests/Coverage/XML/coverage.cobertura.xml)
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ${{ env.coverage_path }})
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
           echo "Coverage percent: $coverage_percent%"
           echo "coverage=$coverage_percent" >> $GITHUB_OUTPUT
@@ -89,8 +92,8 @@ jobs:
           csmacnz.Coveralls \
             --useRelativePaths \
             --opencover \
-            -i ./Tests/Coverage/XML/coverage.cobertura.xml \
-            --repoToken $COVERALLS_REPO_TOKEN \
+            -i ${{ env.coverage_path }} \
+            --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
             --commitId ${{ github.sha }} \
             --commitBranch ${{ github.ref_name }} \
             --serviceName github \
