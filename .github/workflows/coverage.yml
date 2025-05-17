@@ -19,13 +19,6 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: 🔧 Install .NET 6.0 (for coverage tools)
-        run: |
-          wget https://packages.microsoft.com/config/ubuntu/22.04/prod.list
-          sudo mv prod.list /etc/apt/sources.list.d/dotnet-prod.list
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-6.0
-
       - name: 📦 Restore dependencies
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
 
@@ -45,14 +38,17 @@ jobs:
           echo "Arquivo encontrado: $COVERAGE_FILE"
           echo "coverage_path=$COVERAGE_FILE" >> $GITHUB_ENV
 
-      - name: 📊 Generate HTML coverage report
+      - name: 📊 Install ReportGenerator tool
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
-          export PATH="$HOME/.dotnet/tools:$PATH"
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: 📊 Generate HTML coverage report and convert to OpenCover
+        run: |
           reportgenerator \
             -reports:"${{ env.coverage_path }}" \
             -targetdir:"./Tests/Coverage/Report" \
-            -reporttypes:Html
+            -reporttypes:Html,OpenCover
 
       - name: 🛠️ Install xmllint
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
@@ -82,54 +78,17 @@ jobs:
             echo "No changes in README.md"
           fi
 
-      - name: 🔧 Install .NET Core 3.1 (for Coveralls)
+      - name: 📂 Check OpenCover coverage file exists
         run: |
-          wget https://dot.net/v1/dotnet-install.sh
-          chmod +x dotnet-install.sh
-          ./dotnet-install.sh --version 3.1.426 --install-dir "$HOME/dotnet3.1"
-          echo "$HOME/dotnet3.1" >> $GITHUB_PATH
-          export PATH="$HOME/dotnet3.1:$PATH"
-
-      - name: 🔧 Install libssl1.1 (for .NET Core 3.1 compatibility)
-        run: |
-          wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb || \
-          wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.1/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
-          sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb || echo "libssl1.1 already installed or not needed"
-
-      - name: 🧰 Install coveralls.net tool
-        run: |
-          dotnet tool install --global coveralls.net --version 4.0.1
-          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-          export PATH="$HOME/.dotnet/tools:$PATH"
-
-      - name: 📂 Check coverage file exists
-        run: |
-          if [ -f "${{ env.coverage_path }}" ]; then
-            echo "Arquivo de cobertura encontrado: ${{ env.coverage_path }}"
+          if [ -f "./Tests/Coverage/Report/OpenCover.xml" ]; then
+            echo "Arquivo OpenCover encontrado: ./Tests/Coverage/Report/OpenCover.xml"
           else
-            echo "Arquivo de cobertura NÃO encontrado: ${{ env.coverage_path }}"
+            echo "Arquivo OpenCover NÃO encontrado!"
             exit 1
           fi
 
-      - name: 🔄 Convert Cobertura to OpenCover
-        run: |
-          export PATH="$HOME/.dotnet/tools:$PATH"
-          reportgenerator \
-            -reports:**/coverage.cobertura.xml \
-            -targetdir:coveragereport \
-            -reporttypes:OpenCover
-
-      - name: 🚀 Run Coveralls
+      - name: 🚀 Upload coverage to Coveralls via npx
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-          export PATH="$HOME/.dotnet/tools:$PATH"
-          echo "Enviando arquivo ./coveragereport/OpenCover.xml para Coveralls"
-          csmacnz.Coveralls \
-            --opencover \
-            -i ./coveragereport/OpenCover.xml \
-            --repoToken $COVERALLS_REPO_TOKEN \
-            --commitId ${{ github.sha }} \
-            --commitBranch ${{ github.ref_name }} \
-            --serviceName github \
-            --jobId ${{ github.run_id }}
+          npx coveralls < ./Tests/Coverage/Report/OpenCover.xml
