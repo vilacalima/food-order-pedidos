@@ -19,13 +19,17 @@ jobs:
         with:
           dotnet-version: "9.0.x"
 
-      - name: 🔧 Install .NET 6.0 (for Coveralls)
+      - name: 🔧 Install .NET 6.0 (for coverage tools)
         run: |
           wget https://packages.microsoft.com/config/ubuntu/22.04/prod.list
           sudo mv prod.list /etc/apt/sources.list.d/dotnet-prod.list
           sudo apt-get update
           sudo apt-get install -y dotnet-sdk-6.0
-          dotnet --version
+
+      - name: 🔧 Install .NET Core 3.1 (for Coveralls)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dotnet-sdk-3.1
 
       - name: 📦 Restore dependencies
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
@@ -97,11 +101,8 @@ jobs:
             echo "Arquivo de cobertura NÃO encontrado: ${{ env.coverage_path }}"
             exit 1
           fi
-      
-      - name: Install ReportGenerator
-        run: dotnet tool install -g dotnet-reportgenerator-globaltool
-      
-      - name: Convert Cobertura to OpenCover
+
+      - name: 🔄 Convert Cobertura to OpenCover
         run: |
           export PATH="$HOME/.dotnet/tools:$PATH"
           reportgenerator \
