@@ -25,31 +25,26 @@ jobs:
       - name: 🧱 Build do projeto
         run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
 
-      - name: 🧪 Run tests and collect coverage
+      - name: 🧪 Run tests and collect coverage (OpenCover format)
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --no-build \
-            --collect:"XPlat Code Coverage"
-
-      - name: 🔍 Find cobertura file
-        id: find_coverage
-        run: |
-          COVERAGE_FILE=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
-          echo "Arquivo encontrado: $COVERAGE_FILE"
-          echo "coverage_path=$COVERAGE_FILE" >> $GITHUB_ENV
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=opencover \
+            /p:CoverletOutput=./Tests/Coverage/coverage.opencover.xml
 
       - name: 📊 Install ReportGenerator tool
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      - name: 📊 Generate HTML and OpenCover coverage reports
+      - name: 📊 Generate HTML coverage report
         run: |
           export PATH="$HOME/.dotnet/tools:$PATH"
           reportgenerator \
-            -reports:"${{ env.coverage_path }}" \
+            -reports:"./Tests/Coverage/coverage.opencover.xml" \
             -targetdir:"./Tests/Coverage/Report" \
-            -reporttypes:Html;OpenCover
+            -reporttypes:Html
 
       - name: 🛠️ Install xmllint
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
@@ -57,7 +52,7 @@ jobs:
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
-          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" "${{ env.coverage_path }}")
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" "./Tests/Coverage/coverage.opencover.xml")
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
           echo "Coverage percent: $coverage_percent%"
           echo "coverage=$coverage_percent" >> $GITHUB_OUTPUT
@@ -81,8 +76,8 @@ jobs:
 
       - name: 📂 Check OpenCover coverage file exists
         run: |
-          if [ -f "./Tests/Coverage/Report/OpenCover.xml" ]; then
-            echo "Arquivo OpenCover encontrado: ./Tests/Coverage/Report/OpenCover.xml"
+          if [ -f "./Tests/Coverage/coverage.opencover.xml" ]; then
+            echo "Arquivo OpenCover encontrado: ./Tests/Coverage/coverage.opencover.xml"
           else
             echo "Arquivo OpenCover NÃO encontrado!"
             exit 1
@@ -92,4 +87,4 @@ jobs:
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-          npx coveralls < ./Tests/Coverage/Report/OpenCover.xml
+          npx coveralls < ./Tests/Coverage/coverage.opencover.xml
