@@ -92,18 +92,16 @@ jobs:
 
       - name: 🧰 Install and run Coveralls
         env:
-           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-           COVERAGE_PATH: ./FoodOrder.Pedidos/FoodOrder.Pedidos.Tests/TestResults/**/coverage.cobertura.xml
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
-           dotnet tool install --global coveralls.net --version 4.0.1
-           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-           export PATH="$HOME/.dotnet/tools:$PATH"
-           
-           csmacnz.Coveralls \
-             --cobertura \
-             -i "${COVERAGE_PATH}" \
-             --repoToken "${COVERALLS_REPO_TOKEN}" \
-             --commitId "${{ github.sha }}" \
-             --commitBranch "${{ github.ref_name }}" \
-             --serviceName github \
-             --jobId "${{ github.run_id }}"
+          dotnet tool install --global coveralls.net --version 4.0.1
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+          export PATH="$HOME/.dotnet/tools:$PATH"
+          csmacnz.Coveralls \
+            --opencover \
+            -i ./Tests/Coverage/XML/coverage.cobertura.xml \
+            --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
+            --commitId ${{ github.sha }} \
+            --commitBranch ${{ github.ref_name }} \
+            --serviceName github \
+            --jobId ${{ github.run_id }}
