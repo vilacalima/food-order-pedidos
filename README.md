@@ -2,6 +2,9 @@
 
 Microserviço responsável pelo gerenciamento de pedidos em um sistema de delivery.
 
+## Coverage
+![Cobertura](https://img.shields.io/badge/Cobertura-Aguardando_build-lightgrey)
+
 ## 📦 Funcionalidades
 
 - Criação de pedidos com itens de um cardápio externo
