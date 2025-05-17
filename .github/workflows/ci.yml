@@ -1,6 +1,9 @@
 name: CI - Build e Testes
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
