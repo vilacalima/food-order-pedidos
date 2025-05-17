@@ -17,16 +17,19 @@ jobs:
       - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
-      - name: 🔧 Instalar .NET 8
+      - name: 🔧 Setup .NET 9.0 SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '9.0.x'
 
       - name: 📦 Restaurar dependências
-        run: dotnet restore
+        run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
+
+      - name: 🧱 Build do projeto
+        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
 
       - name: 🧪 Rodar testes com cobertura
-        run: dotnet test --no-restore --collect:"XPlat Code Coverage" --results-directory TestResults
+        run: dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-build --collect:"XPlat Code Coverage" --results-directory TestResults --verbosity normal
 
       - name: 📊 Instalar ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
