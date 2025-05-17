@@ -90,16 +90,30 @@ jobs:
           git config --global --add safe.directory $(pwd)
           git fetch --unshallow || true
 
-      - name: 🧰 Install and run Coveralls
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      - name: 🧰 Install coveralls.net tool
         run: |
           dotnet tool install --global coveralls.net --version 4.0.1
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
           export PATH="$HOME/.dotnet/tools:$PATH"
+
+      - name: 📂 Check coverage file exists
+        run: |
+          if [ -f "${{ env.coverage_path }}" ]; then
+            echo "Arquivo de cobertura encontrado: ${{ env.coverage_path }}"
+          else
+            echo "Arquivo de cobertura NÃO encontrado: ${{ env.coverage_path }}"
+            exit 1
+          fi
+      
+      - name: 🚀 Run Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: |
+          export PATH="$HOME/.dotnet/tools:$PATH"
           csmacnz.Coveralls \
+            --useRelativePaths \
             --opencover \
-            -i ./Tests/Coverage/XML/coverage.cobertura.xml \
+            -i ${{ env.coverage_path }} \
             --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
             --commitId ${{ github.sha }} \
             --commitBranch ${{ github.ref_name }} \
