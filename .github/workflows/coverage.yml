@@ -17,7 +17,7 @@ jobs:
       - name: 🔧 Setup .NET 9.0 SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: "9.0.x"
 
       - name: 🔧 Install .NET 6.0 (for Coveralls)
         run: |
@@ -57,7 +57,7 @@ jobs:
 
       - name: 🛠️ Install xmllint
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
-      
+
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
@@ -82,21 +82,21 @@ jobs:
           else
             echo "No changes in README.md"
           fi
-          
+
       - name: 🔄 Fetch all history for Coveralls
         run: git fetch --unshallow || true
-        
+
       - name: ⚙️ Setup git config for Coveralls
         run: |
           git config --global --add safe.directory $(pwd)
           git fetch --unshallow || true
-      
+
       - name: 🧰 Install coveralls.net tool
         run: |
           dotnet tool install --global coveralls.net --version 4.0.1
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
           export PATH="$HOME/.dotnet/tools:$PATH"
-      
+
       - name: 📂 Check coverage file exists
         run: |
           if [ -f "${{ env.coverage_path }}" ]; then
@@ -105,7 +105,7 @@ jobs:
             echo "Arquivo de cobertura NÃO encontrado: ${{ env.coverage_path }}"
             exit 1
           fi
-      
+
       - name: 🚀 Run Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
