@@ -31,6 +31,9 @@ jobs:
       - name: 🧪 Rodar testes com cobertura
         run: dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-build --collect:"XPlat Code Coverage" --results-directory TestResults --verbosity normal
 
+      - name: 🔍 Debug - Listar arquivos TestResults
+        run: ls -R TestResults || echo "Pasta TestResults não encontrada"
+
       - name: 📊 Instalar ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
@@ -42,11 +45,18 @@ jobs:
             -reporttypes:HtmlInline_AzurePipelines;Cobertura \
             -classfilters:"-*.Migrations.*"
 
+      - name: 🔧 Instalar xmllint para extrair dados XML
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
       - name: 📈 Extrair porcentagem da cobertura
         id: coverage
         run: |
+          echo "Conteúdo do arquivo Cobertura.xml:"
+          cat coverage-report/Cobertura.xml
           total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" coverage-report/Cobertura.xml)
+          echo "Linha rate extraída: $total_line_rate"
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
+          echo "Cobertura calculada: ${coverage_percent}%"
           echo "coverage_percent=${coverage_percent}" >> $GITHUB_ENV
           echo "coverage=${coverage_percent}" >> $GITHUB_OUTPUT
 
@@ -59,8 +69,7 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add README.md
-          git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%" || echo "Nenhuma mudança no README"
-          git push
+          git diff --quiet && echo "Nenhuma mudança no README" || (git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%" && git push)
 
       - name: 📁 Publicar HTML do relatório
         uses: actions/upload-artifact@v3
