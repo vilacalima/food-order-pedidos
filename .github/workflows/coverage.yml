@@ -75,8 +75,13 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add README.md
-          git diff --quiet && echo "No changes in README.md" || (git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%" && git push)
-
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%"
+            git push
+          else
+            echo "No changes in README.md"
+          fi
+          
       - name: 🔄 Fetch all history for Coveralls
         run: git fetch --unshallow || true
 
