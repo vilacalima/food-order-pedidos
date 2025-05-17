@@ -66,12 +66,8 @@ jobs:
 
       - name: ✏️ Update coverage badge in README.md
         run: |
-          sed -i -E "s|!
-
-\[Cobertura\]
-
-\(https://img.shields.io/badge/Cobertura-[0-9]+(\.[0-9]+)?%25-brightgreen\)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g" README.md
-
+          sed -i -E "s|!\[Cobertura\]\(https://img.shields.io/badge/Cobertura-[0-9]+(\.[0-9]+)?%25-brightgreen\)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g" README.md
+          
       - name: 💾 Commit and push README update
         run: |
           git config --global user.name "github-actions"
