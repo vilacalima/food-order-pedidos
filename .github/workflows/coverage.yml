@@ -45,7 +45,6 @@ jobs:
 
       - name: 📊 Generate HTML and OpenCover coverage reports
         run: |
-          dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
           export PATH="$HOME/.dotnet/tools:$PATH"
           reportgenerator \
             -reports:"${{ env.coverage_path }}" \
