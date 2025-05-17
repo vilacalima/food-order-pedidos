@@ -1,4 +1,4 @@
-name: Test and Report Coverage
+name: Report Coverage
 
 on:
   push:
@@ -47,14 +47,13 @@ jobs:
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
           reportgenerator \
-            -reports:"./FoodOrder.Pedidos.Tests/coverage.cobertura.xml" \
+            -reports:"./Tests/Coverage/XML/coverage.cobertura.xml" \
             -targetdir:"./Tests/Coverage/Report" \
             -reporttypes:Html
 
       - name: 📈 Extract coverage percentage
         id: coverage
         run: |
-          # Extrai a cobertura total do XML Cobertura gerado pelo ReportGenerator
           total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ./Tests/Coverage/XML/coverage.cobertura.xml)
           coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
           echo "Coverage percent: $coverage_percent%"
@@ -63,7 +62,6 @@ jobs:
 
       - name: ✏️ Update coverage badge in README.md
         run: |
-          # Atualiza o badge no README.md com a nova porcentagem de cobertura
           sed -i -E "s|!\[Cobertura\]\(https://img.shields.io/badge/Cobertura-[0-9]+(\.[0-9]+)?%25-brightgreen\)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g" README.md
 
       - name: 💾 Commit and push README update
