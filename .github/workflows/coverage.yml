@@ -1,0 +1,61 @@
+name: Coverage Report
+
+on:
+  push:
+    branches:
+      - Master
+  pull_request:
+    branches:
+      - Master
+  workflow_dispatch:
+
+jobs:
+  run-tests-and-generate-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: 🔧 Instalar .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: 📦 Restaurar dependências
+        run: dotnet restore
+
+      - name: 🧪 Rodar testes com cobertura
+        run: dotnet test --no-restore --collect:"XPlat Code Coverage" --results-directory TestResults
+
+      - name: 📊 Instalar ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: 📊 Gerar HTML do Coverage
+        run: |
+          reportgenerator \
+            -reports:"TestResults/**/coverage.cobertura.xml" \
+            -targetdir:"coverage-report" \
+            -reporttypes:HtmlInline_AzurePipelines;Cobertura \
+            -classfilters:"-*.Migrations.*"
+
+      - name: 📈 Extrair porcentagem da cobertura
+        id: coverage
+        run: |
+          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" coverage-report/Cobertura.xml)
+          coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
+          echo "Cobertura: ${coverage_percent}%"
+          echo "coverage=${coverage_percent}" >> $GITHUB_OUTPUT
+
+      - name: 📤 Atualizar badge no README
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            ![Cobertura](https://img.shields.io/badge/Cobertura-${{ steps.coverage.outputs.coverage }}%25-brightgreen)
+
+      - name: 📁 Publicar HTML do relatório
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-html
+          path: coverage-report
