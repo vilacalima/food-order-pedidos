@@ -28,14 +28,14 @@ jobs:
           dotnet --version
 
       - name: 📦 Restore dependencies
-        run: dotnet restore FoodOrder_Cardapio.sln
+        run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
 
-      - name: 🧱 Build solution
-        run: dotnet build FoodOrder_Cardapio.sln --no-restore --configuration Release
+      - name: 🧱 Build do projeto
+        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
 
       - name: 🧪 Run tests and collect coverage
         run: |
-          dotnet test FoodOrder_Cardapio.sln \
+          dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --no-build \
             --collect:"XPlat Code Coverage" \
             --results-directory ./Tests/Coverage/XML \
