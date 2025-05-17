@@ -1,0 +1,26 @@
+name: CI - Build e Testes
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Build da imagem Docker (tag temporária)
+        run: docker build -f src/FoodOrder.Pedidos.Presentation/Dockerfile -t vilacaro/pedido:test-ci .
+
+      - name: 🧪 Restaurar dependências
+        run: dotnet restore
+
+      - name: 🧱 Build do projeto
+        run: dotnet build --no-restore --configuration Release
+
+      - name: 🧪 Rodar testes
+        run: dotnet test --no-build --verbosity normal
