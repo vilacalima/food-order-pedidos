@@ -101,14 +101,18 @@ jobs:
       - name: 🚀 Run Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          COVERAGE_PATH: ./FoodOrder.Pedidos/FoodOrder.Pedidos.Tests/TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml
         run: |
           export PATH="$HOME/.dotnet/tools:$PATH"
+          echo "Arquivo de cobertura: $COVERAGE_PATH"
           csmacnz.Coveralls \
+            --verbose \
             --useRelativePaths \
             --opencover \
-            -i "${{ env.coverage_path }}" \
-            --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
+            -i "$COVERAGE_PATH" \
+            --repoToken $COVERALLS_REPO_TOKEN \
             --commitId ${{ github.sha }} \
             --commitBranch ${{ github.ref_name }} \
             --serviceName github \
             --jobId ${{ github.run_id }}
+
