@@ -26,16 +26,15 @@ jobs:
 
       - name: 🧪 Run tests with coverage
         run: |
-          mkdir -p CoverageResults
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --configuration Release \
             --no-build \
             /p:CollectCoverage=true \
-            /p:CoverletOutput=CoverageResults/ \
             /p:CoverletOutputFormat=cobertura
 
       - name: 📡 Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          files: CoverageResults/coverage.cobertura.xml
+          files: '**/coverage.cobertura.xml'
           fail_ci_if_error: true
+          verbose: true
