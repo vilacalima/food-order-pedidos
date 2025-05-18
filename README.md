@@ -3,7 +3,7 @@
 Microserviço responsável pelo gerenciamento de pedidos em um sistema de delivery.
 
 ## Coverage
-[![codecov](https://codecov.io/gh/vilacalima/food-order-pedidos/branch/Master/graph/badge.svg)](https://codecov.io/gh/vilacalima/food-order-pedidos)
+📊 [Relatório de Cobertura de Testes](https://vilacaro.github.io/food-order-pedidos/)
 
 ## 📦 Funcionalidades
 
