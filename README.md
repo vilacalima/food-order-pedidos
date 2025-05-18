@@ -3,7 +3,7 @@
 Microserviço responsável pelo gerenciamento de pedidos em um sistema de delivery.
 
 ## Coverage
-📊 [Relatório de Cobertura de Testes](https://vilacaro.github.io/food-order-pedidos/)
+[![Cobertura de Testes](https://img.shields.io/badge/cobertura-testes-blueviolet?style=for-the-badge&logo=.net)](https://vilacaro.github.io/food-order-pedidos/)
 
 ## 📦 Funcionalidades
 
