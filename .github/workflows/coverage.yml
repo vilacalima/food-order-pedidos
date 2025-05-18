@@ -1,4 +1,4 @@
-name: Build, Test and Coverage
+name: Test and Generate Coverage Report
 
 on:
   push:
@@ -10,32 +10,70 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout code
+      - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup .NET 9
+      - name: 🔧 Instalar .NET SDK 9.0
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: "9.0.x"
 
-      - name: 📦 Restore dependencies
+      - name: 📦 Restaurar dependências
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
 
-      - name: 🧱 Build
-        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --configuration Release --no-restore
+      - name: 🧱 Build do projeto
+        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
 
-      - name: 🧪 Run tests with coverage
+      - name: 🧪 Rodar testes com cobertura
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
-            --configuration Release \
             --no-build \
+            --configuration Release \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=cobertura \
-            /p:CoverletOutput=TestResults/
+            /p:CoverletOutput=./coverage/
 
-      - name: 📡 Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+      - name: 📊 Instalar ReportGenerator
+        run: |
+          dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: 📈 Gerar relatório HTML
+        run: |
+          reportgenerator \
+            -reports:./coverage/coverage.cobertura.xml \
+            -targetdir:./coverage-report \
+            -reporttypes:Html
+
+      - name: 📈 Instalar xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: 🔢 Extrair porcentagem da cobertura
+        id: coverage
+        run: |
+          percent=$(xmllint --xpath "string(//coverage/@line-rate)" ./coverage/coverage.cobertura.xml)
+          cobertura=$(awk "BEGIN { printf \"%.2f\", ${percent} * 100 }")
+          echo "Cobertura: $cobertura%"
+          echo "coverage_percent=$cobertura" >> $GITHUB_ENV
+
+      - name: ✏️ Atualizar badge no README.md
+        run: |
+          sed -i -E "s|!\[Cobertura\]\(https://img.shields.io/badge/Cobertura-[0-9]+(\.[0-9]+)?%25-brightgreen\)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g" README.md || true
+
+      - name: 💾 Commitar e enviar atualização no README
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%"
+            git push
+          else
+            echo "README.md não teve mudanças"
+          fi
+
+      - name: 📤 Upload do relatório HTML
+        uses: actions/upload-artifact@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} # Remova essa linha se for repo público
-          files: ./TestResults/coverage.cobertura.xml
-          fail_ci_if_error: true
+          name: coverage-report
+          path: ./coverage-report
