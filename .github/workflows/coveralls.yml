@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,14 +20,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 9.0.x
-
-      - name: Install .NET 6.0 (for Coveralls)
-        run: |
-          wget https://packages.microsoft.com/config/ubuntu/22.04/prod.list
-          sudo mv prod.list /etc/apt/sources.list.d/dotnet-prod.list
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-6.0
-          dotnet --version
 
       - name: Install dependencies
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
@@ -39,63 +32,40 @@ jobs:
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --no-build \
             --collect:"XPlat Code Coverage" \
-            --results-directory ./Tests/Coverage/XML \
             -p:CollectCoverage=true \
             -p:CoverletOutputFormat=opencover \
-            -p:CoverletOutput=./Tests/Coverage/XML/coverage.cobertura.xml \
-            -p:SourceLink=$(pwd)
-
-      - name: Confirm Repository Structure
-        run: ls -la $(pwd)
-
-      - name: List coverage files
-        run: ls -la ./Tests/Coverage/
-
-      - name: Verifique a existência do arquivo de cobertura
-        run: ls -la ./Tests/Coverage/XML/
-
-      - name: Verifique a estrutura de diretórios
-        run: |
-          echo "Conteúdo do diretório ./Tests/Coverage/XML/"
-          ls -la ./Tests/Coverage/XML/
-
-      - name: Move Copia arquivo de cobertura
-        run: |
-          mkdir -p ./Tests/Coverage/XML/Coverage
-          cp ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml
-          ls -la ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080
-          
-      - name: Verifique o conteúdo do arquivo de cobertura
-        run: cat ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml
-
-      - name: Fetch all history for Coveralls
-        run: git fetch --unshallow || true
-
-      - name: Set up Git for Coveralls
-        run: |
-          git config --global --add safe.directory $(pwd)
-          git fetch --unshallow || true
+            -p:CoverletOutput=./coverage/ \
+            -p:ExcludeByFile="**/*Migrations/*.cs"
 
       - name: Generate HTML Report
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool
           reportgenerator \
-            -reports:"./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml" \
-            -targetdir:"./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080" \
+            -reports:"./coverage/coverage.cobertura.xml" \
+            -targetdir:"./coverage/report" \
             -reporttypes:Html
+
+      - name: Upload Coverage Report Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: ./coverage/report
+
+      - name: Fetch all history for Coveralls
+        run: git fetch --unshallow || true
+
+      - name: Set up Git for Coveralls
+        run: git config --global --add safe.directory $(pwd)
 
       - name: Install and run Coveralls
         run: |
           dotnet tool install --global coveralls.net
-          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
           export PATH="$HOME/.dotnet/tools:$PATH"
-          
-          ls -la ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080
 
           csmacnz.Coveralls \
             --useRelativePaths \
             --opencover \
-            -i ./TestResults/e57ee41c-8936-42ef-a915-d043d14bf080/coverage.cobertura.xml \
+            -i ./coverage/coverage.cobertura.xml \
             --repoToken "${{ secrets.COVERALLS_REPO_TOKEN }}" \
             --commitId "${{ github.sha }}" \
             --commitBranch "${{ github.ref_name }}" \
