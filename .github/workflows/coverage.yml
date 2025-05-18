@@ -25,4 +25,45 @@ jobs:
         run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --configuration Release --no-restore
 
       - name: 📦 Install ReportGenerator
-        run: dotnet tool install -g dotne
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: 🧪 Run tests with coverage
+        run: |
+          dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
+            --configuration Release \
+            --no-build \
+            --collect:"XPlat Code Coverage"
+
+      - name: 📁 Generate HTML coverage report
+        run: |
+          reportgenerator \
+            -reports:"**/coverage.cobertura.xml" \
+            -targetdir:"coverage-report" \
+            -reporttypes:Html
+
+      - name: 💾 Save coverage report artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage-report
+
+  deploy-pages:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/Master'
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🔄 Restore coverage output from previous job
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage-report
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./coverage-report
