@@ -9,7 +9,7 @@ Este repositório constrói um serviço que faz parte de uma arquitetura de micr
 ![Coverage](./Readme/coverage.png?raw=true "Arquitetura")
 
 ## 🏗️ Arquitetura de Microsserviços
-![Arquitetura](arquitetura.png?raw=true "Arquitetura")
+![Arquitetura](./Readme/arquitetura.png?raw=true "Arquitetura")
 
 ### :computer: Tecnologias Utilizadas
 - Linguagem escolhida: .NET
