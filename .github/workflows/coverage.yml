@@ -29,19 +29,15 @@ jobs:
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --configuration Release \
             --no-build \
-            /p:CollectCoverage=true \
-            /p:CoverletOutputFormat=cobertura \
-            /p:CoverletOutput=./coverage.cobertura.xml
+            --collect:"XPlat Code Coverage"
 
-      - name: 🔍 Verify coverage file exists
+      - name: 🔍 List coverage files
         run: |
-          ls -la coverage.cobertura.xml
-          echo "First 20 lines of coverage file:"
-          head -n 20 coverage.cobertura.xml
+          find . -name "*.coverage"
+          find . -name "*.xml"
 
       - name: 📡 Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          files: 'coverage.cobertura.xml'
           fail_ci_if_error: true
           verbose: true
