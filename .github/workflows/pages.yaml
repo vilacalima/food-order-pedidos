@@ -1,0 +1,23 @@
+name: Deploy GitHub Pages
+
+on:
+  workflow_run:
+    workflows: ["Test and Report Coverage"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.head_branch == 'master'  
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git remote set-url origin https://github.com/${{ github.repository }}.git
+          git add docs/
+          git commit -m "Deploy updated coverage report"
+          git push
