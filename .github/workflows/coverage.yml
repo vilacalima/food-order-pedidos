@@ -1,4 +1,4 @@
-name: Build, Test and Local Coverage Report
+name: Build, Test and Coverage
 
 on:
   push:
@@ -24,25 +24,5 @@ jobs:
       - name: 🧱 Build
         run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --configuration Release --no-restore
 
-      - name: 🧪 Run tests and collect coverage
-        run: |
-          dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.Tests/FoodOrder.Pedidos.Tests.csproj \
-            --configuration Release \
-            --collect:"XPlat Code Coverage"
-
       - name: 📦 Install ReportGenerator
-        run: dotnet tool install --global dotnet-reportgenerator-globaltool
-
-      - name: 🗂 Generate HTML report
-        run: |
-          REPORT_PATH=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
-          reportgenerator \
-            -reports:$REPORT_PATH \
-            -targetdir:coverage-report \
-            -reporttypes:Html
-
-      - name: 📎 Upload coverage report as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: coverage-report
+        run: dotnet tool install -g dotne
