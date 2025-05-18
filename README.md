@@ -1,68 +1,62 @@
-# FoodOrder.Pedidos
+# :hamburger: Food Order Pedidos
+![FoodOrder](foodorder.png?raw=true "FoodOrder")
 
-Microserviço responsável pelo gerenciamento de pedidos em um sistema de delivery.
+## :pencil: Descrição do Projeto
+<p align="left">Este projeto tem como objetivo concluir as  entregas do Tech Challenge do curso de Software Architecture da Pós Graduação da FIAP 2024/2025.
+Este repositório constrói um serviço que faz parte de uma arquitetura de microsserviços.</p>
 
-## Coverage
-[![codecov](https://codecov.io/gh/vilacaro/food-order-pedidos/branch/Master/graph/badge.svg)](https://codecov.io/gh/vilacaro/food-order-pedidos)
+## 📊 Code Coverage
+![Coverage](./Readme/coverage.png?raw=true "Arquitetura")
 
-## 📦 Funcionalidades
+## 🏗️ Arquitetura de Microsserviços
+![Arquitetura](arquitetura.png?raw=true "Arquitetura")
 
-- Criação de pedidos com itens de um cardápio externo
-- Integração assíncrona com serviços de:
-  - Pagamento
-  - Produção
-  - Cardápio
-  - Usuário
-- Comunicação via AWS SQS (mensageria)
+### :computer: Tecnologias Utilizadas
+- Linguagem escolhida: .NET
+- Banco de Dados: Postgres
+- Mensageria: Publica na fila SQS
 
-## 🛠 Tecnologias Utilizadas
+### :hammer: Detalhes desse serviço
+Microserviço responsável pelo módulo de pedidos da arquitetura de microserviços do sistema FoodOrder, desenvolvido em .NET e Postgres.
 
-- .NET 8
-- C#
-- PostgreSQL
-- Docker e Docker Compose
-- AWS SQS
-- DDD e Clean Architecture
+### :hammer_and_wrench: Execução do projeto
+Para rodar o serviço localmente, você precisa ter Docker e .NET 9 instalados.
 
-## 📂 Estrutura do Projeto
-
-```
-food-order-pedidos/
-├── src/ 
-│ ├── FoodOrder.Pedidos.Application/ # Regras de negócio (casos de uso)
-│ ├── FoodOrder.Pedidos.Domain/ # Entidades, agregados e interfaces
-│ ├── FoodOrder.Pedidos.Infrastructure/ # Repositórios, banco de dados, integrações externas
-│ ├── FoodOrder.Pedidos.Presentation/ # API (Controllers, Middlewares, etc.)
-│ └── FoodOrder.Pedidos.Tests/ # Testes unitários
-├── docker-compose/ # Arquivos para orquestração de containers
-├── docker-compose.yml
-└── README.md
-```
-
-## 🧭 Arquitetura do Serviço de Pedidos
-
-![Arquitetura FoodOrder.Pedidos](./Readme/Arquitetura.jpg)
-
-## 🚀 Como Rodar o Projeto
-
-### Pré-requisitos
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/)
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
-### Passos
-
-1. Clone o repositório:
+Para construir e rodar o serviço, utilize o comando:
 
 ```bash
-git clone https://github.com/vilacalima/food-order-pedidos.git
-cd food-order-pedidos
-````
+docker-compose up --build -d
+```
+
+* Criar a rede Docker para comunicação entre os serviços.
+* Subir o banco de dados Postgress.
+* Iniciar o serviço `foodorder.pedidos`.
+
+Para parar e remover os containers, use:
+
+```bash
+docker-compose down
+```
+
+### Endpoints Disponíveis
+
+| Método | Endpoint                                | Descrição                                     |
+| ------ | --------------------------------------- | --------------------------------------------- |
+| POST   | /Checkout                               | Faz checkout/cadastro do pedido.              |
+| GET    | /ListarPedidos                          | Consulta todos os pedidos.                    |
+| POST   | /AtualizarStatusPedido                  | Atualiza status do pedido.                    |
+| GET    | /AtualizarStatuspagamento               | Atualiza status do pagamento.                 |
+
+### 🗄️ Outros repos do microserviço dessa arquitetura
+- [Food Order Produção](https://github.com/diegogl12/food-order-producao)
+- [Food Order Pagamento](https://github.com/diegogl12/food-order-pagamento)
+- [Food Order Cardápio](https://github.com/RafaelKamada/foodorder-cardapio)
+- [Food Order Pedidos](https://github.com/vilacalima/food-order-pedidos)
+- [Food Order Usuários](https://github.com/RafaelKamada/FoodOrder)
 
 ### :page_with_curl: Documentações
-- [Documentação de arquitetura](./Readme/README_ARQUITETURA.md)
-- [Documentação do banco de dados](./Readme/README_DB.md)
+- [Miro (todo planejamento do projeto)](https://miro.com/app/board/uXjVKhyEAME=/)
+
 
 ### :busts_in_silhouette: Autores
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/96452759?v=4" width=115><br><sub>Robson Vilaça - RM358345</sub>](https://github.com/vilacalima) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/16946021?v=4" width=115><br><sub>Diego Gomes - RM358549</sub>](https://github.com/diegogl12) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/8690168?v=4" width=115><br><sub>Nathalia Freire - RM359533</sub>](https://github.com/nathaliaifurita) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/43392619?v=4" width=115><br><sub>Rafael Kamada - RM359345</sub>](https://github.com/RafaelKamada) |
