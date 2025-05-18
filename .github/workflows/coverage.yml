@@ -30,11 +30,18 @@ jobs:
             --configuration Release \
             --no-build \
             /p:CollectCoverage=true \
-            /p:CoverletOutputFormat=cobertura
+            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutput=./coverage.cobertura.xml
+
+      - name: 🔍 Verify coverage file exists
+        run: |
+          ls -la coverage.cobertura.xml
+          echo "First 20 lines of coverage file:"
+          head -n 20 coverage.cobertura.xml
 
       - name: 📡 Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
-          files: '**/coverage.cobertura.xml'
+          files: 'coverage.cobertura.xml'
           fail_ci_if_error: true
           verbose: true
