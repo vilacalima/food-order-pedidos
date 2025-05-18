@@ -1,4 +1,4 @@
-name: Build, Test and Coverage
+name: Build, Test and Local Coverage Report
 
 on:
   push:
@@ -24,33 +24,25 @@ jobs:
       - name: 🧱 Build
         run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --configuration Release --no-restore
 
-      - name: 📁 Create test-results folder
-        run: mkdir -p test-results
-
-      - name: 🧪 Run tests with coverage and junit report
+      - name: 🧪 Run tests and collect coverage
         run: |
-          dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
+          dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.Tests/FoodOrder.Pedidos.Tests.csproj \
             --configuration Release \
-            --no-build \
-            --collect:"XPlat Code Coverage" \
-            --logger:"junit;LogFilePath=test-results/junit.xml"
+            --collect:"XPlat Code Coverage"
 
-      - name: 🔍 Verificar arquivos gerados
+      - name: 📦 Install ReportGenerator
+        run: dotnet tool install --global dotnet-reportgenerator-globaltool
+
+      - name: 🗂 Generate HTML report
         run: |
-          find . -name "*.coverage"
-          find . -name "*.xml"
-          ls -la test-results
+          REPORT_PATH=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
+          reportgenerator \
+            -reports:$REPORT_PATH \
+            -targetdir:coverage-report \
+            -reporttypes:Html
 
-      - name: 📡 Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+      - name: 📎 Upload coverage report as artifact
+        uses: actions/upload-artifact@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
-          verbose: true
-
-      - name: 📡 Upload test results (JUnit) to Codecov
-        if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: test-results/junit.xml
+          name: coverage-report
+          path: coverage-report
