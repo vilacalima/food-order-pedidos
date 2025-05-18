@@ -1,5 +1,5 @@
 # :hamburger: Food Order Pedidos
-![FoodOrder](foodorder.png?raw=true "FoodOrder")
+![FoodOrder](./Readme/foodorder.png?raw=true "FoodOrder")
 
 ## :pencil: Descrição do Projeto
 <p align="left">Este projeto tem como objetivo concluir as  entregas do Tech Challenge do curso de Software Architecture da Pós Graduação da FIAP 2024/2025.
