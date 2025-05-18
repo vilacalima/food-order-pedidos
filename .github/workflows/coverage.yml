@@ -1,9 +1,8 @@
-name: Test and Report Coverage
+name: Build, Test and Coverage
 
 on:
   push:
-    branches:
-      - Master
+    branches: [ Master ]
   pull_request:
 
 jobs:
@@ -14,94 +13,29 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup .NET 9.0 SDK
+      - name: 🔧 Setup .NET 9
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '9.0.x'
 
-      - name: 🔧 Install .NET 6.0 (for Coveralls)
-        run: |
-          wget https://packages.microsoft.com/config/ubuntu/22.04/prod.list
-          sudo mv prod.list /etc/apt/sources.list.d/dotnet-prod.list
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-6.0
-          dotnet --version
-
       - name: 📦 Restore dependencies
         run: dotnet restore FoodOrder.Pedidos/FoodOrder.Pedidos.sln
 
-      - name: 🧱 Build do projeto
-        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --no-restore --configuration Release
+      - name: 🧱 Build
+        run: dotnet build FoodOrder.Pedidos/FoodOrder.Pedidos.sln --configuration Release --no-restore
 
-      - name: 🧪 Run tests and collect coverage
+      - name: 🧪 Run tests with coverage
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
+            --configuration Release \
             --no-build \
-            --collect:"XPlat Code Coverage"
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutput=TestResults/
 
-      - name: 🔍 Find cobertura file
-        id: find_coverage
-        run: |
-          COVERAGE_FILE=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
-          echo "Arquivo encontrado: $COVERAGE_FILE"
-          echo "coverage_path=$COVERAGE_FILE" >> $GITHUB_ENV
-
-      - name: 📊 Generate HTML coverage report
-        run: |
-          dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.1.10
-          reportgenerator \
-            -reports:"$coverage_path" \
-            -targetdir:"./Tests/Coverage/Report" \
-            -reporttypes:Html
-            
-      - name: 🛠️ Install xmllint
-        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
-      
-      - name: 📈 Extract coverage percentage
-        id: coverage
-        run: |
-          total_line_rate=$(xmllint --xpath "string(//coverage/@line-rate)" ${{ env.coverage_path }})
-          coverage_percent=$(awk "BEGIN { printf \"%.2f\", ${total_line_rate} * 100 }")
-          echo "Coverage percent: $coverage_percent%"
-          echo "coverage=$coverage_percent" >> $GITHUB_OUTPUT
-          echo "coverage_percent=$coverage_percent" >> $GITHUB_ENV
-
-      - name: ✏️ Update coverage badge in README.md
-        run: |
-          sed -i -E "s|!\[Cobertura\]\(https://img.shields.io/badge/Cobertura-[0-9]+(\.[0-9]+)?%25-brightgreen\)|![Cobertura](https://img.shields.io/badge/Cobertura-${{ env.coverage_percent }}%25-brightgreen)|g" README.md
-
-      - name: 💾 Commit and push README update
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add README.md
-          if ! git diff --cached --quiet; then
-            git commit -m "Atualiza badge de cobertura para ${{ env.coverage_percent }}%"
-            git push
-          else
-            echo "No changes in README.md"
-          fi
-          
-      - name: 🔄 Fetch all history for Coveralls
-        run: git fetch --unshallow || true
-
-      - name: ⚙️ Setup git config for Coveralls
-        run: |
-          git config --global --add safe.directory $(pwd)
-          git fetch --unshallow || true
-
-      - name: 🧰 Install and run Coveralls
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: |
-          dotnet tool install --global coveralls.net --version 4.0.1
-          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-          export PATH="$HOME/.dotnet/tools:$PATH"
-          csmacnz.Coveralls \
-            --opencover \
-            -i ./Tests/Coverage/XML/coverage.cobertura.xml \
-            --repoToken ${{ secrets.COVERALLS_REPO_TOKEN }} \
-            --commitId ${{ github.sha }} \
-            --commitBranch ${{ github.ref_name }} \
-            --serviceName github \
-            --jobId ${{ github.run_id }}
+      - name: 📡 Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # Remova essa linha se for repo público
+          files: ./TestResults/coverage.cobertura.xml
+          fail_ci_if_error: true
