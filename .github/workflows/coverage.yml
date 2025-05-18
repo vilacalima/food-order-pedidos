@@ -2,7 +2,7 @@ name: Build, Test and Coverage
 
 on:
   push:
-    branches: [ Master ]
+    branches: [ Master ] # Verifique se é Master ou main (minúsculo)
   pull_request:
 
 jobs:
@@ -27,12 +27,20 @@ jobs:
       - name: 📦 Install ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
+      - name: 🔧 Add dotnet tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
       - name: 🧪 Run tests with coverage
         run: |
           dotnet test FoodOrder.Pedidos/FoodOrder.Pedidos.sln \
             --configuration Release \
             --no-build \
             --collect:"XPlat Code Coverage"
+
+      - name: 🔍 List coverage files
+        run: |
+          find . -name "*.coverage"
+          find . -name "*.xml"
 
       - name: 📁 Generate HTML coverage report
         run: |
@@ -50,7 +58,7 @@ jobs:
   deploy-pages:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/Master'
+    if: github.ref == 'refs/heads/Master' # Confirme o nome da branch
 
     steps:
       - name: 📥 Checkout code
